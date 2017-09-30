@@ -5,7 +5,6 @@ using UnityEngine;
 public class AlienSpawner : MonoBehaviour {
 
     public GameObject alien;
-    public GameObject alienSpawn;
     public GameObject planet;
 
 	// Use this for initialization
@@ -64,7 +63,7 @@ public class AlienSpawner : MonoBehaviour {
 
         move = move.normalized;
 
-        GameObject alien1 = Instantiate(alien, alienPos, alienSpawn.transform.rotation);
+        GameObject alien1 = Instantiate(alien, alienPos, alien.transform.rotation);
         alien1.GetComponent<Rigidbody2D>().velocity = move * 5;
 
     }
