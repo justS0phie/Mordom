@@ -4,13 +4,26 @@ using UnityEngine;
 
 public class ArrasteDeElemento : MonoBehaviour {
 
-	// Use this for initialization
+	private bool habilitado;
+
+	public bool elementoSendoArrastado;
+
 	void Start () {
-		
+
+		habilitado = false;
+		objetoSendoArrastado = false;
 	}
 	
-	// Update is called once per frame
 	void Update () {
-		
+
+		if(!habilitado) return;
+	}
+
+	public void HabilitarArraste() {
+		habilitado = true;
+	}
+
+	public void DesabilitarArraste() {
+		habilitado = false;
 	}
 }
