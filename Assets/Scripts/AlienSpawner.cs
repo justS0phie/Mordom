@@ -1,11 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class AlienSpawner : MonoBehaviour {
 
     public GameObject alien;
     public GameObject planet;
+	public Text scoreTxt;
+
+	int score = 100;
 
 	// Use this for initialization
 	void Start () {
@@ -13,6 +17,8 @@ public class AlienSpawner : MonoBehaviour {
         float spawnRate = 0.5f;
 
         InvokeRepeating("CreateAlien", 0, spawnRate);
+
+		scoreTxt.text = "Score: " + score;
 
     }
 	
@@ -34,8 +40,11 @@ public class AlienSpawner : MonoBehaviour {
 
             Vector2 move = new Vector2(dx, dy);
 
-            if (move.magnitude < 1)
-                Destroy(alien);
+			if (move.magnitude < 2) {
+				Destroy(alien);
+				score = score - 1;
+				scoreTxt.text = "Score: " + score;
+			}
         }
     }
 
@@ -64,7 +73,7 @@ public class AlienSpawner : MonoBehaviour {
         move = move.normalized;
 
         GameObject alien1 = Instantiate(alien, alienPos, alien.transform.rotation);
-        alien1.GetComponent<Rigidbody2D>().velocity = move * 5;
+        alien1.GetComponent<Rigidbody2D>().velocity = move * 3;
 
     }
 }
