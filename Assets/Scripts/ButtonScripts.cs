@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ButtonScripts : MonoBehaviour {
 
-	public float camSize;
-	public float btnSize;
+	float camSize;
+	float btnSize;
 
 	private Vector3 scale;
 	private Vector3 pos;

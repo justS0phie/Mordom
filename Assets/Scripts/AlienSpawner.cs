@@ -9,9 +9,13 @@ public class AlienSpawner : MonoBehaviour {
     public GameObject planet;
 	public Text scoreTxt;
 
+	float limx;
+	float limy;
+	float limxb;
+	float limyb;
+
 	int score = 100;
 
-	// Use this for initialization
 	void Start () {
 
         float spawnRate = 0.5f;
@@ -22,7 +26,6 @@ public class AlienSpawner : MonoBehaviour {
 
     }
 	
-	// Update is called once per frame
 	void Update () {
 
         GameObject[] alienList = GameObject.FindGameObjectsWithTag("Alien");
@@ -54,14 +57,22 @@ public class AlienSpawner : MonoBehaviour {
         Vector2 planetPosition = new Vector2(planet.transform.position.x, planet.transform.position.y);
         int side = Random.Range(1, 5);
         Vector2 move, alienPos;
+
+		Camera camera = Camera.main;
+		CameraControl script = camera.GetComponent("CameraControl") as CameraControl;
+		limx = 2*script.limx;
+		limy = 2*script.limy;
+		limxb = 2*script.limxb;
+		limyb = 2*script.limyb;
+
         if (side == 1)
-            alienPos = new Vector2(-10.0f, Random.Range(-6.0f,6.0f));
+			alienPos = new Vector2(limx-2.5f, Random.Range(limy-2.5f,limyb+2.5f));
         else if (side == 2)
-            alienPos = new Vector2(Random.Range(-10.0f, 10.0f), 6.0f);
+			alienPos = new Vector2(Random.Range(limx-2.5f,limxb+2.5f), limyb+2.5f);
         else if (side == 3)
-            alienPos = new Vector2(10.0f, Random.Range(-6.0f, 6.0f));
+			alienPos = new Vector2(limxb+2.5f, Random.Range(limy-2.5f,limyb+2.5f));
         else
-            alienPos = new Vector2(Random.Range(-10.0f, 10.0f), -6.0f);
+			alienPos = new Vector2(Random.Range(limx-2.5f,limxb+2.5f), limy-2.5f);
 
         float dx = planetPosition.x - alienPos.x;
         float dy = planetPosition.y - alienPos.y;

@@ -17,14 +17,14 @@ public class CameraControl : MonoBehaviour {
 	void Start()
 	{
 		cam = Camera.main;
-		orthoZoomSpeed = cam.orthographicSize/50;
+		orthoZoomSpeed = cam.orthographicSize/200;
 		x = 0;
 		y = 0;
 	}
 
 	void Update()
 	{
-		orthoZoomSpeed = cam.orthographicSize/50;
+		orthoZoomSpeed = cam.orthographicSize/200;
 
 		limy = -cam.orthographicSize;
 		limx = -(cam.orthographicSize * Screen.width / Screen.height);
@@ -43,10 +43,10 @@ public class CameraControl : MonoBehaviour {
 		if (Input.GetKey("a"))
 			x = x - 0.1f;
 
-		limx = (limx + x)/2;
-		limy = (limy + y)/2;
 		limxb = (-limx + x)/2;
 		limyb = (-limy + y)/2;
+		limx = (limx + x)/2;
+		limy = (limy + y)/2;
 
 		while (limx < -23) {
 			x = x + 0.1f;
@@ -56,11 +56,11 @@ public class CameraControl : MonoBehaviour {
 			y = y + 0.1f;
 			limy = limy + 0.05f;
 		}
-		while (limxb > 12) {
+		while (limxb > 23) {
 			x = x - 0.1f;
 			limxb = limxb - 0.05f;
 		}
-		while (limyb > 7) {
+		while (limyb > 13) {
 			y = y - 0.1f;
 			limyb = limyb - 0.05f;
 		}
