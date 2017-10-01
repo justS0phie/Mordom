@@ -58,6 +58,12 @@ public class ControleDeArraste : MonoBehaviour {
 
 	public void DesabilitarArraste() {
 		habilitado = false;
+
+		if(objetoSendoArrastado != null) {
+
+			objetoSendoArrastado.GetComponent<ArrasteDeElemento>().FinalizarArraste();
+			objetoSendoArrastado = null;
+		}
 	}
 
 	public void EmpilharElemento(GameObject elemento) {
