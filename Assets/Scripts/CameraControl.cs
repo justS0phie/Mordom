@@ -4,21 +4,67 @@ using UnityEngine;
 
 public class CameraControl : MonoBehaviour {
 
-	private Camera cam;
+	Camera cam;
+	float orthoZoomSpeed;
+	float x;
+	float y;
+
+	public float limx;
+	public float limy;
+	public float limxb;
+	public float limyb;
 
 	void Start()
 	{
 		cam = Camera.main;
+		orthoZoomSpeed = cam.orthographicSize/50;
+		x = 0;
+		y = 0;
 	}
 
 	void Update()
 	{
-		if (Input.GetKey("space"))
-		{
-			// choose the margin randomly
-			float margin = Random.Range(0.0f, 0.3f);
-			// setup the rectangle
-			cam.rect = new Rect(margin, 0.0f, 1.0f - margin * 2.0f, 1.0f);
+		orthoZoomSpeed = cam.orthographicSize/50;
+
+		limy = -cam.orthographicSize;
+		limx = -(cam.orthographicSize * Screen.width / Screen.height);
+
+		if (Input.GetKey("down") && cam.orthographicSize < 25)
+			cam.orthographicSize += orthoZoomSpeed;
+		if (Input.GetKey("up") && cam.orthographicSize > 5)
+			cam.orthographicSize -= orthoZoomSpeed;
+
+		if (Input.GetKey("w"))
+			y = y + 0.1f;
+		if (Input.GetKey("s"))
+			y = y - 0.1f;
+		if (Input.GetKey("d"))
+			x = x + 0.1f;
+		if (Input.GetKey("a"))
+			x = x - 0.1f;
+
+		limx = (limx + x)/2;
+		limy = (limy + y)/2;
+		limxb = (-limx + x)/2;
+		limyb = (-limy + y)/2;
+
+		while (limx < -23) {
+			x = x + 0.1f;
+			limx = limx + 0.05f;
 		}
+		while (limy < -13) {
+			y = y + 0.1f;
+			limy = limy + 0.05f;
+		}
+		while (limxb > 12) {
+			x = x - 0.1f;
+			limxb = limxb - 0.05f;
+		}
+		while (limyb > 7) {
+			y = y - 0.1f;
+			limyb = limyb - 0.05f;
+		}
+
+		transform.position = new Vector3 (x, y, -30);
 	}
 }
