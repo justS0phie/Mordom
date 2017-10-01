@@ -65,7 +65,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1474811712420760}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10, y: -5, z: 0}
+  m_LocalPosition: {x: 10, y: -5, z: 99}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4545927548694428}
@@ -103,7 +103,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alien: {fileID: 1474811712420760}
-  planet: {fileID: 1753184546706110, guid: af777964e3c49c34d9e6c300a4f89513, type: 2}
+  planet: {fileID: 0}
+  scoreTxt: {fileID: 0}
 --- !u!212 &212930093576195418
 SpriteRenderer:
   m_ObjectHideFlags: 1
