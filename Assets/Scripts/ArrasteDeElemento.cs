@@ -4,13 +4,35 @@ using UnityEngine;
 
 public class ArrasteDeElemento : MonoBehaviour {
 
-	// Use this for initialization
+	public bool elementoSendoArrastado;
+
 	void Start () {
-		
+
+		elementoSendoArrastado = false;
 	}
 	
-	// Update is called once per frame
 	void Update () {
-		
+
+		if(!elementoSendoArrastado) return;
+
+		Vector3 posicaoDoMouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+		transform.position = new Vector3(posicaoDoMouse.x, posicaoDoMouse.y, -1);
+	}
+
+	public void IniciarArraste() {
+		elementoSendoArrastado = true;
+	}
+
+	public void FinalizarArraste() {
+		elementoSendoArrastado = false;
+	}
+
+	public void OnMouseEnter() {
+		ControleDeArraste.instancia.EmpilharElemento(gameObject);
+	}
+
+	public void OnMouseExit() {
+		ControleDeArraste.instancia.RetirarElemento(gameObject);
 	}
 }
