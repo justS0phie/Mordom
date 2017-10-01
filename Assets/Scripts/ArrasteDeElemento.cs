@@ -4,26 +4,35 @@ using UnityEngine;
 
 public class ArrasteDeElemento : MonoBehaviour {
 
-	private bool habilitado;
-
 	public bool elementoSendoArrastado;
 
 	void Start () {
 
-		habilitado = false;
-		objetoSendoArrastado = false;
+		elementoSendoArrastado = false;
 	}
 	
 	void Update () {
 
-		if(!habilitado) return;
+		if(!elementoSendoArrastado) return;
+
+		Vector3 posicaoDoMouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+		transform.position = new Vector3(posicaoDoMouse.x, posicaoDoMouse.y, -1);
 	}
 
-	public void HabilitarArraste() {
-		habilitado = true;
+	public void IniciarArraste() {
+		elementoSendoArrastado = true;
 	}
 
-	public void DesabilitarArraste() {
-		habilitado = false;
+	public void FinalizarArraste() {
+		elementoSendoArrastado = false;
+	}
+
+	public void OnMouseEnter() {
+		ControleDeArraste.instancia.EmpilharElemento(gameObject);
+	}
+
+	public void OnMouseExit() {
+		ControleDeArraste.instancia.RetirarElemento(gameObject);
 	}
 }
