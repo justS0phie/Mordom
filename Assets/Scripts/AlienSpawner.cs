@@ -60,6 +60,7 @@ public class AlienSpawner : MonoBehaviour {
 
 		Camera camera = Camera.main;
 		CameraControl script = camera.GetComponent("CameraControl") as CameraControl;
+
 		limx = 2*script.limx;
 		limy = 2*script.limy;
 		limxb = 2*script.limxb;
@@ -79,12 +80,15 @@ public class AlienSpawner : MonoBehaviour {
         
         move = new Vector2(dx, dy);
 
+		if (move.magnitude < 5)
+			return;
+
         float angle = Mathf.Atan(dx/dy); 
 
         move = move.normalized;
 
-        GameObject alien1 = Instantiate(alien, alienPos, alien.transform.rotation);
-        alien1.GetComponent<Rigidbody2D>().velocity = move * 3;
+        GameObject newAlien = Instantiate(alien, alienPos, alien.transform.rotation);
+		newAlien.GetComponent<Rigidbody2D>().velocity = move * 3;
 
     }
 }
