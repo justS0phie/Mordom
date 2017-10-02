@@ -7,13 +7,19 @@ public class ControleDeFases : MonoBehaviour {
 	public FaseDeJogo fase;
 
 	public bool objetosInstanciados;
+	bool prep;
+	private GameObject alienspawn;
 
 	public GameObject planeta;
 
 	void Start () {
 		fase = FaseDeJogo.NONE;
 
+		prep = false;
+
 		objetosInstanciados = false;
+		alienspawn = GameObject.FindGameObjectWithTag ("Respawn");
+		alienspawn.SetActive (false);
 
 		planeta = null;
 	}
@@ -24,25 +30,31 @@ public class ControleDeFases : MonoBehaviour {
 
 		switch(fase) {
 
-			case FaseDeJogo.Preparacao:
-
-				gameObject.GetComponent<ControleDeArraste>().HabilitarArraste();
+		case FaseDeJogo.Preparacao:
+			gameObject.GetComponent<ControleDeArraste> ().HabilitarArraste ();
 			break;
 
-			case FaseDeJogo.Jogo:
-
-				gameObject.GetComponent<ControleDeArraste>().DesabilitarArraste();
+		case FaseDeJogo.Jogo:
+			gameObject.GetComponent<ControleDeArraste>().DesabilitarArraste();
+			alienspawn.SetActive (true);
 			break;
+
 		}
 	}
 	
 	void Update () {
-
 		//se os objetos a serem manipulados ainda nao estiverem instanciados, procurar na hierarquia pela tag
-		if(!objetosInstanciados)
-			ProcurarObjetos();
-		else
+		if (!objetosInstanciados)
+			ProcurarObjetos ();
+		else if (!prep) {
 			MudarDeFase(FaseDeJogo.Preparacao);
+			prep = true;
+		}
+
+		if (Input.GetKey("space")){
+			MudarDeFase(FaseDeJogo.Jogo);
+		}
+			
 	}
 
 	private void ProcurarObjetos() {

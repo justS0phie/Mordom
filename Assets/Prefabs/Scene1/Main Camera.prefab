@@ -38,6 +38,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4267571571142676}
   - component: {fileID: 212983327235763132}
+  - component: {fileID: 61191808277733896}
+  - component: {fileID: 114767752592169908}
   m_Layer: 0
   m_Name: Button4
   m_TagString: Untagged
@@ -71,6 +73,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4212499475697886}
   - component: {fileID: 212404134973842906}
+  - component: {fileID: 61193579716094630}
+  - component: {fileID: 114097527173777042}
   m_Layer: 0
   m_Name: Button1
   m_TagString: Untagged
@@ -87,6 +91,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4242035352777960}
   - component: {fileID: 212688929638708920}
+  - component: {fileID: 61209338030452268}
+  - component: {fileID: 114199553776569878}
   m_Layer: 0
   m_Name: Button3
   m_TagString: Untagged
@@ -103,6 +109,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4532566131051400}
   - component: {fileID: 212424831800831540}
+  - component: {fileID: 61891304885827858}
+  - component: {fileID: 114348632388847658}
   m_Layer: 0
   m_Name: Button2
   m_TagString: Untagged
@@ -220,7 +228,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1964075516229546}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 20}
+  m_LocalPosition: {x: 0, y: 0, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4212499475697886}
@@ -266,6 +274,106 @@ Camera:
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
   m_StereoMirrorMode: 0
+--- !u!61 &61191808277733896
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1135518187273006}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!61 &61193579716094630
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1205588911501088}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!61 &61209338030452268
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1277101365724302}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!61 &61891304885827858
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1517153510206730}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!81 &81081846044701196
 AudioListener:
   m_ObjectHideFlags: 1
@@ -306,8 +414,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54e6b239251c3d645a29a9b2ce7a78ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camSize: 0
-  btnSize: 0
+--- !u!114 &114097527173777042
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1205588911501088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 052cb30fdeadf1840864d41eeec4c3ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  elementoSendoArrastado: 0
+--- !u!114 &114199553776569878
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1277101365724302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 052cb30fdeadf1840864d41eeec4c3ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  elementoSendoArrastado: 0
+--- !u!114 &114348632388847658
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1517153510206730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 052cb30fdeadf1840864d41eeec4c3ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  elementoSendoArrastado: 0
 --- !u!114 &114589445476677078
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -324,6 +466,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &114767752592169908
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1135518187273006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 052cb30fdeadf1840864d41eeec4c3ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  elementoSendoArrastado: 0
 --- !u!114 &114789714656201562
 MonoBehaviour:
   m_ObjectHideFlags: 1

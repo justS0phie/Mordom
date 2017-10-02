@@ -34,9 +34,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1330936911405010}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -11}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27b2400b1803a7743a5bf6b11c33d394, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fase: 0
+  fase: 2
   objetosInstanciados: 0
   planeta: {fileID: 0}
 --- !u!114 &114511227689566700
@@ -63,7 +63,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1330936911405010}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 773fe15517e053447b59697b68e97b16, type: 3}
+  m_Script: {fileID: 11500000, guid: e3209d0ecbecb484289b9e7d969d5993, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   habilitado: 0
