@@ -8,7 +8,6 @@ public class ButtonScripts : MonoBehaviour {
 	float btnSize;
 
 	private Vector3 scale;
-	private Vector3 pos;
 	Camera main;
 
 	// Use this for initialization
@@ -16,7 +15,6 @@ public class ButtonScripts : MonoBehaviour {
 		camSize = Camera.main.orthographicSize;
 		btnSize = camSize;
 		scale = transform.localScale;
-		pos = Camera.main.WorldToViewportPoint (transform.position);
 	}
 	
 	// Update is called once per frame

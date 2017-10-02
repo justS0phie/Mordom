@@ -15,8 +15,6 @@ public class ControleDeArraste : MonoBehaviour {
             instancia = this;
         else if (instancia != this)
             Destroy(gameObject);
-
-        DontDestroyOnLoad(gameObject);
     }
 
 
@@ -69,7 +67,6 @@ public class ControleDeArraste : MonoBehaviour {
 	public void EmpilharElemento(GameObject elemento) {
 
 		pseudoPilhaDeArraste.Add(elemento);
-		Debug.Log("adicionado na pilha: " + elemento.name);
 	}
 
 	public void RetirarElemento(GameObject elemento) {
@@ -77,6 +74,5 @@ public class ControleDeArraste : MonoBehaviour {
 		if(pseudoPilhaDeArraste.Contains(elemento))
 			pseudoPilhaDeArraste.Remove(elemento);
 
-		Debug.Log("retirado da pilha: " + elemento.name);
 	}
 }

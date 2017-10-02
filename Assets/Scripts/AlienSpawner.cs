@@ -83,8 +83,6 @@ public class AlienSpawner : MonoBehaviour {
 		if (move.magnitude < 5)
 			return;
 
-        float angle = Mathf.Atan(dx/dy); 
-
         move = move.normalized;
 
         GameObject newAlien = Instantiate(alien, alienPos, alien.transform.rotation);

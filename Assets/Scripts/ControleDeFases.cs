@@ -24,7 +24,7 @@ public class ControleDeFases : MonoBehaviour {
 		planeta = null;
 	}
 
-	void MudarDeFase(FaseDeJogo novaFase) {
+	public void MudarDeFase(FaseDeJogo novaFase) {
 
 		fase = novaFase;
 
