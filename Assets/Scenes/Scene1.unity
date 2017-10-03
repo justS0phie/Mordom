@@ -157,6 +157,11 @@ Prefab:
       propertyPath: scoreTxt
       value: 
       objectReference: {fileID: 2019321829}
+    - target: {fileID: 114170936129177850, guid: 0ea0cea4a9ee4d6409d70501522adc40,
+        type: 2}
+      propertyPath: planet
+      value: 
+      objectReference: {fileID: 1724507973}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0ea0cea4a9ee4d6409d70501522adc40, type: 2}
   m_IsPrefabParent: 0

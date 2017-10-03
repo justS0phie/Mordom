@@ -6,6 +6,8 @@ public class SpeedControl : MonoBehaviour {
 
     float distance;
     float proportion;
+	float initD;
+	Vector2 initSpeed;
 
     public GameObject planet;
 
@@ -13,8 +15,8 @@ public class SpeedControl : MonoBehaviour {
     {
         float dx = planet.transform.position.x - transform.position.x;
         float dy = planet.transform.position.y - transform.position.y;
-        float initD = new Vector2(dx, dy);
-        float initSpeed = GetComponent<Rigidbody2D>().velocity.magnitude;
+		initD = new Vector2(dx, dy).magnitude;
+		initSpeed = GetComponent<Rigidbody2D>().velocity;
     }
 	
 	// Update is called once per frame
@@ -23,7 +25,7 @@ public class SpeedControl : MonoBehaviour {
         float dy = planet.transform.position.y - transform.position.y;
 
         distance = new Vector2(dx, dy).magnitude;
-        proportion = initD / distance;
+		proportion = (distance / initD) * 3;
         GetComponent<Rigidbody2D>().velocity = initSpeed * proportion;
     }
 }
