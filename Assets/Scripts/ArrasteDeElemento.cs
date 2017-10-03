@@ -17,7 +17,7 @@ public class ArrasteDeElemento : MonoBehaviour {
 
 		Vector3 posicaoDoMouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-		transform.position = new Vector3(posicaoDoMouse.x, posicaoDoMouse.y, -1);
+		transform.position = new Vector3(posicaoDoMouse.x, posicaoDoMouse.y, transform.position.z);
 	}
 
 	public void IniciarArraste() {
