@@ -716,6 +716,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!212 &212127808993705072
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -757,6 +758,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!212 &212404134973842906
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -798,6 +800,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!212 &212424831800831540
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -839,6 +842,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!212 &212688929638708920
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -880,6 +884,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!212 &212983327235763132
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -921,6 +926,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!222 &222007861739875166
 CanvasRenderer:
   m_ObjectHideFlags: 1

@@ -80,13 +80,15 @@ public class AlienSpawner : MonoBehaviour {
         
         move = new Vector2(dx, dy);
 
+        float speed = move.magnitude;
+
 		if (move.magnitude < 5)
 			return;
 
         move = move.normalized;
 
         GameObject newAlien = Instantiate(alien, alienPos, alien.transform.rotation);
-		newAlien.GetComponent<Rigidbody2D>().velocity = move * 3;
+		newAlien.GetComponent<Rigidbody2D>().velocity = move * speed;
 
     }
 }
