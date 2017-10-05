@@ -22,6 +22,8 @@ GameObject:
   - component: {fileID: 212142900593040996}
   - component: {fileID: 50115731998343450}
   - component: {fileID: 114402971371323334}
+  - component: {fileID: 60068231523491180}
+  - component: {fileID: 60511465032467572}
   m_Layer: 0
   m_Name: Alien A
   m_TagString: Alien
@@ -40,6 +42,8 @@ GameObject:
   - component: {fileID: 212930093576195418}
   - component: {fileID: 50217356290512584}
   - component: {fileID: 114332266680822358}
+  - component: {fileID: 60097049256343714}
+  - component: {fileID: 60848502103548356}
   m_Layer: 0
   m_Name: Alien B
   m_TagString: Alien
@@ -144,6 +148,142 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!60 &60068231523491180
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1209979201934060}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.47552824, y: -0.15450853}
+      - {x: 0.29389268, y: -0.40450847}
+      - {x: 0.000000059604645, y: -0.5}
+      - {x: -0.2938926, y: -0.40450853}
+      - {x: -0.47552824, y: -0.15450853}
+      - {x: -0.4755283, y: 0.15450847}
+      - {x: -0.29389262, y: 0.40450847}
+      - {x: 0, y: 0.5}
+      - {x: 0.2938925, y: 0.4045086}
+      - {x: 0.47552824, y: 0.15450859}
+--- !u!60 &60097049256343714
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1474811712420760}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.47552824, y: -0.15450853}
+      - {x: 0.29389268, y: -0.40450847}
+      - {x: 0.000000059604645, y: -0.5}
+      - {x: -0.2938926, y: -0.40450853}
+      - {x: -0.47552824, y: -0.15450853}
+      - {x: -0.4755283, y: 0.15450847}
+      - {x: -0.29389262, y: 0.40450847}
+      - {x: 0, y: 0.5}
+      - {x: 0.2938925, y: 0.4045086}
+      - {x: 0.47552824, y: 0.15450859}
+--- !u!60 &60511465032467572
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1209979201934060}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.47552824, y: -0.15450853}
+      - {x: 0.29389268, y: -0.40450847}
+      - {x: 0.000000059604645, y: -0.5}
+      - {x: -0.2938926, y: -0.40450853}
+      - {x: -0.47552824, y: -0.15450853}
+      - {x: -0.4755283, y: 0.15450847}
+      - {x: -0.29389262, y: 0.40450847}
+      - {x: 0, y: 0.5}
+      - {x: 0.2938925, y: 0.4045086}
+      - {x: 0.47552824, y: 0.15450859}
+--- !u!60 &60848502103548356
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1474811712420760}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.47552824, y: -0.15450853}
+      - {x: 0.29389268, y: -0.40450847}
+      - {x: 0.000000059604645, y: -0.5}
+      - {x: -0.2938926, y: -0.40450853}
+      - {x: -0.47552824, y: -0.15450853}
+      - {x: -0.4755283, y: 0.15450847}
+      - {x: -0.29389262, y: 0.40450847}
+      - {x: 0, y: 0.5}
+      - {x: 0.2938925, y: 0.4045086}
+      - {x: 0.47552824, y: 0.15450859}
 --- !u!114 &114042989720878848
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -170,6 +310,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1f34c3a3c6902d4a9c1cc8a1dafb5d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: 0
   planet: {fileID: 0}
 --- !u!114 &114402971371323334
 MonoBehaviour:
@@ -182,6 +323,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8901e7985eb41594da6cab2f8ab57896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: 0
   planet: {fileID: 0}
 --- !u!212 &212142900593040996
 SpriteRenderer:

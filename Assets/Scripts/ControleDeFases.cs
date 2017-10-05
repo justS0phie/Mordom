@@ -8,7 +8,9 @@ public class ControleDeFases : MonoBehaviour {
 
 	public bool objetosInstanciados;
 	bool prep;
+	bool activateCannon;
 	private GameObject alienspawn;
+	private GameObject[] toolList;
 
 	public GameObject planeta;
 
@@ -20,6 +22,11 @@ public class ControleDeFases : MonoBehaviour {
 		objetosInstanciados = false;
 		alienspawn = GameObject.FindGameObjectWithTag ("Respawn");
 		alienspawn.SetActive (false);
+
+		toolList = GameObject.FindGameObjectsWithTag("Tool");
+
+		foreach (GameObject tool in toolList)
+			tool.SetActive (false);
 
 		planeta = null;
 	}
@@ -35,8 +42,9 @@ public class ControleDeFases : MonoBehaviour {
 			break;
 
 		case FaseDeJogo.Jogo:
-			gameObject.GetComponent<ControleDeArraste>().DesabilitarArraste();
+			gameObject.GetComponent<ControleDeArraste> ().DesabilitarArraste ();
 			alienspawn.SetActive (true);
+			activateCannon = true;
 			break;
 
 		}
@@ -49,6 +57,12 @@ public class ControleDeFases : MonoBehaviour {
 		else if (!prep) {
 			MudarDeFase (FaseDeJogo.Preparacao);
 			prep = true;
+		}
+
+		if (activateCannon && !Input.GetMouseButtonDown(0)){
+			foreach (GameObject tool in toolList)
+				tool.SetActive (true);
+			activateCannon = false;
 		}
 
 		if (fase == FaseDeJogo.Preparacao) {

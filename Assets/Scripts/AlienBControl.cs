@@ -12,6 +12,8 @@ public class AlienBControl : MonoBehaviour {
 	int side;
 	float Timer;
 
+	public int score;
+
 	public GameObject planet;
 
 	void Start ()
@@ -21,6 +23,7 @@ public class AlienBControl : MonoBehaviour {
 		initD = new Vector2(dx, dy).magnitude;
 		initSpeed = GetComponent<Rigidbody2D>().velocity;
 		phase = 1;
+		score = 0;
 		Timer = 0.0f;
 	}
 
@@ -62,6 +65,12 @@ public class AlienBControl : MonoBehaviour {
 			proportion = (distance / initD) * 3;
 			GetComponent<Rigidbody2D> ().velocity = initSpeed * proportion;
 		}
+	}
 
+	void OnCollisionEnter2D(Collision2D coll) {
+		if (coll.gameObject.tag == "Tool") {
+			Destroy(this.gameObject);
+			score = score + 1;
+		}
 	}
 }
