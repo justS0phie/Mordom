@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpeedControl : MonoBehaviour {
+public class AlienAControl : MonoBehaviour {
 
     float distance;
     float proportion;

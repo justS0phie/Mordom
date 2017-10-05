@@ -47,14 +47,17 @@ public class ControleDeFases : MonoBehaviour {
 		if (!objetosInstanciados)
 			ProcurarObjetos ();
 		else if (!prep) {
-			MudarDeFase(FaseDeJogo.Preparacao);
+			MudarDeFase (FaseDeJogo.Preparacao);
 			prep = true;
 		}
 
-		if (Input.GetKey("space")){
-			MudarDeFase(FaseDeJogo.Jogo);
+		if (fase == FaseDeJogo.Preparacao) {
+			GameObject[] alienList = GameObject.FindGameObjectsWithTag("Alien");
+
+			foreach (GameObject alien in alienList) {
+				Destroy (alien);
+			}
 		}
-			
 	}
 
 	private void ProcurarObjetos() {

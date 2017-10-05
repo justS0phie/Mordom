@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class AlienSpawner : MonoBehaviour {
 
-    public GameObject alien;
+    public GameObject alienA;
+	public GameObject alienB;
     public GameObject planet;
 	public Text scoreTxt;
 
@@ -31,10 +32,8 @@ public class AlienSpawner : MonoBehaviour {
         GameObject[] alienList = GameObject.FindGameObjectsWithTag("Alien");
 
 
-        for (int i=0; i< alienList.Length; i++)
+		foreach (GameObject alien in alienList)
         {
-            alien = alienList[i];
-
             Vector2 alienPos = new Vector2(alien.transform.position.x, alien.transform.position.y);
             Vector2 planetPosition = new Vector2(planet.transform.position.x, planet.transform.position.y);
 
@@ -55,7 +54,10 @@ public class AlienSpawner : MonoBehaviour {
     {
 
         Vector2 planetPosition = new Vector2(planet.transform.position.x, planet.transform.position.y);
-        int side = Random.Range(1, 5);
+        
+		int side = Random.Range(1, 5);
+		int type = Random.Range(1, 11);
+
         Vector2 move, alienPos;
 
 		Camera camera = Camera.main;
@@ -87,8 +89,12 @@ public class AlienSpawner : MonoBehaviour {
 
         move = move.normalized;
 
-        GameObject newAlien = Instantiate(alien, alienPos, alien.transform.rotation);
-		newAlien.GetComponent<Rigidbody2D>().velocity = move * speed;
-
+		if (type <= 2) {
+			GameObject newAlien = Instantiate (alienB, alienPos, alienA.transform.rotation);
+			newAlien.GetComponent<Rigidbody2D> ().velocity = move * speed;
+		} else {
+			GameObject newAlien = Instantiate(alienA, alienPos, alienB.transform.rotation);
+			newAlien.GetComponent<Rigidbody2D>().velocity = move * speed;
+		}
     }
 }
