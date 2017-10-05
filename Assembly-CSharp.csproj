@@ -46,6 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\MoveTrail.cs" />
      <Compile Include="Assets\Scripts\AlienSpawner.cs" />
      <Compile Include="Assets\Scripts\ArrasteDeElemento.cs" />
      <Compile Include="Assets\Scripts\ControleDeFases.cs" />
