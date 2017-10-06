@@ -231,16 +231,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114402971371323334, guid: 0ea0cea4a9ee4d6409d70501522adc40,
-        type: 2}
-      propertyPath: planet
-      value: 
-      objectReference: {fileID: 1724507973}
-    - target: {fileID: 114332266680822358, guid: 0ea0cea4a9ee4d6409d70501522adc40,
-        type: 2}
-      propertyPath: planet
-      value: 
-      objectReference: {fileID: 1724507973}
     - target: {fileID: 114042989720878848, guid: 0ea0cea4a9ee4d6409d70501522adc40,
         type: 2}
       propertyPath: planet
@@ -256,6 +246,16 @@ Prefab:
       propertyPath: livesTxt
       value: 
       objectReference: {fileID: 1732950003}
+    - target: {fileID: 114332266680822358, guid: 0ea0cea4a9ee4d6409d70501522adc40,
+        type: 2}
+      propertyPath: planet
+      value: 
+      objectReference: {fileID: 1724507973}
+    - target: {fileID: 114402971371323334, guid: 0ea0cea4a9ee4d6409d70501522adc40,
+        type: 2}
+      propertyPath: planet
+      value: 
+      objectReference: {fileID: 1724507973}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0ea0cea4a9ee4d6409d70501522adc40, type: 2}
   m_IsPrefabParent: 0

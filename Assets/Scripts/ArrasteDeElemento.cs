@@ -5,6 +5,7 @@ using UnityEngine;
 public class ArrasteDeElemento : MonoBehaviour {
 
 	public bool elementoSendoArrastado;
+	private Vector2 initialPos;
 
 	void Start () {
 
@@ -22,10 +23,18 @@ public class ArrasteDeElemento : MonoBehaviour {
 
 	public void IniciarArraste() {
 		elementoSendoArrastado = true;
+		initialPos = transform.position;
 	}
 
 	public void FinalizarArraste() {
 		elementoSendoArrastado = false;
+
+		foreach (GameObject button in GameObject.FindGameObjectsWithTag("Button")) {
+			if (button != this.gameObject) {
+				if (this.gameObject.GetComponent<Collider2D> ().IsTouching (button.GetComponent<Collider2D> ()))
+					transform.position = initialPos;
+			}
+		}
 	}
 
 	public void OnMouseEnter() {

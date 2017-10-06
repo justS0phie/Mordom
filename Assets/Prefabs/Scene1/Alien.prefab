@@ -299,6 +299,7 @@ MonoBehaviour:
   alienB: {fileID: 1474811712420760}
   planet: {fileID: 0}
   scoreTxt: {fileID: 0}
+  livesTxt: {fileID: 0}
 --- !u!114 &114332266680822358
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -310,7 +311,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1f34c3a3c6902d4a9c1cc8a1dafb5d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 0
   planet: {fileID: 0}
 --- !u!114 &114402971371323334
 MonoBehaviour:
@@ -323,7 +323,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8901e7985eb41594da6cab2f8ab57896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 0
   planet: {fileID: 0}
 --- !u!212 &212142900593040996
 SpriteRenderer:
