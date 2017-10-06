@@ -9,9 +9,8 @@ public class AlienAControl : MonoBehaviour {
 	float initD;
 	Vector2 initSpeed;
 
-	public int score;
-
     public GameObject planet;
+	private AlienSpawner parent;
 
     void Start ()
     {
@@ -19,7 +18,8 @@ public class AlienAControl : MonoBehaviour {
         float dy = planet.transform.position.y - transform.position.y;
 		initD = new Vector2(dx, dy).magnitude;
 		initSpeed = GetComponent<Rigidbody2D>().velocity;
-		score = 0;
+
+		parent = GameObject.FindGameObjectWithTag ("Respawn").GetComponent<AlienSpawner>();
     }
 	
 	// Update is called once per frame
@@ -32,12 +32,11 @@ public class AlienAControl : MonoBehaviour {
         GetComponent<Rigidbody2D>().velocity = initSpeed * proportion;
     }
 
-	void OnCollisionEnter2D(Collision2D coll) {
-		if (coll.gameObject.tag == "Tool") {
-			Destroy(this.gameObject);
-			score = score + 1;
+	void OnTriggerEnter2D(Collider2D coll) {
+		if (coll.tag == "Tool") {
+			parent.addScore ();
+			Destroy (this.gameObject);
+			Destroy (coll.transform.parent.gameObject);
 		}
-
-		print ("Woot");
 	}
 }

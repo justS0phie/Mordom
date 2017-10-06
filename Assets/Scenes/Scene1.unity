@@ -251,6 +251,11 @@ Prefab:
       propertyPath: scoreTxt
       value: 
       objectReference: {fileID: 2019321829}
+    - target: {fileID: 114042989720878848, guid: 0ea0cea4a9ee4d6409d70501522adc40,
+        type: 2}
+      propertyPath: livesTxt
+      value: 
+      objectReference: {fileID: 1732950003}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0ea0cea4a9ee4d6409d70501522adc40, type: 2}
   m_IsPrefabParent: 0
@@ -259,6 +264,12 @@ GameObject:
   m_PrefabParentObject: {fileID: 1753184546706110, guid: af777964e3c49c34d9e6c300a4f89513,
     type: 2}
   m_PrefabInternal: {fileID: 699097623}
+--- !u!114 &1732950003 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114860059714731340, guid: 471ee1120cfdbdf458b93faf016a7689,
+    type: 2}
+  m_PrefabInternal: {fileID: 1856605464}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &1754363383
 Prefab:
   m_ObjectHideFlags: 0
@@ -350,7 +361,7 @@ Prefab:
   m_IsPrefabParent: 0
 --- !u!114 &2019321829 stripped
 MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114860059714731340, guid: 471ee1120cfdbdf458b93faf016a7689,
+  m_PrefabParentObject: {fileID: 114986374084481328, guid: 471ee1120cfdbdf458b93faf016a7689,
     type: 2}
   m_PrefabInternal: {fileID: 1856605464}
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}

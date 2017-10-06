@@ -9,13 +9,15 @@ public class AlienSpawner : MonoBehaviour {
 	public GameObject alienB;
     public GameObject planet;
 	public Text scoreTxt;
+	public Text livesTxt;
 
 	float limx;
 	float limy;
 	float limxb;
 	float limyb;
 
-	int score = 100;
+	int score = 0;
+	int lives = 5;
 
 	void Start () {
 
@@ -24,6 +26,7 @@ public class AlienSpawner : MonoBehaviour {
         InvokeRepeating("CreateAlien", 0, spawnRate);
 
 		scoreTxt.text = "Score: " + score;
+		livesTxt.text = "Lives: " + lives;
 
     }
 	
@@ -44,8 +47,8 @@ public class AlienSpawner : MonoBehaviour {
 
 			if (move.magnitude < 2) {
 				Destroy(alien);
-				score = score - 1;
-				scoreTxt.text = "Score: " + score;
+				lives = lives - 1;
+				livesTxt.text = "Lives: " + lives;
 			}
         }
     }
@@ -97,4 +100,9 @@ public class AlienSpawner : MonoBehaviour {
 			newAlien.GetComponent<Rigidbody2D>().velocity = move * speed;
 		}
     }
+
+	public void addScore(){
+		score = score + 1;
+		scoreTxt.text = "Score: " + score;
+	}
 }
