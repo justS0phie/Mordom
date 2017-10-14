@@ -17,7 +17,8 @@ public class AlienSpawner : MonoBehaviour {
 	float limyb;
 
 	int score = 0;
-	int lives = 5;
+	int lives = 0;
+	public int spawnNumber = 0;
 
 	void Start () {
 
@@ -47,8 +48,8 @@ public class AlienSpawner : MonoBehaviour {
 
 			if (move.magnitude < 2) {
 				Destroy(alien);
-				lives = lives - 1;
-				livesTxt.text = "Lives: " + lives;
+				lives = lives + 1;
+				livesTxt.text = "Vidas perdidas: " + lives;
 			}
         }
     }
@@ -99,10 +100,12 @@ public class AlienSpawner : MonoBehaviour {
 			GameObject newAlien = Instantiate(alienA, alienPos, alienB.transform.rotation);
 			newAlien.GetComponent<Rigidbody2D>().velocity = move * speed;
 		}
+
+		spawnNumber++;
     }
 
 	public void addScore(){
 		score = score + 1;
-		scoreTxt.text = "Score: " + score;
+		scoreTxt.text = "Aliens mortos: " + score/2;
 	}
 }

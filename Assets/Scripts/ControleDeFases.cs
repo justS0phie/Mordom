@@ -8,7 +8,7 @@ public class ControleDeFases : MonoBehaviour {
 
 	public bool objetosInstanciados;
 	bool prep;
-	bool activateCannon;
+	public bool activateCannon;
 	private GameObject alienspawn;
 	private GameObject[] toolList;
 

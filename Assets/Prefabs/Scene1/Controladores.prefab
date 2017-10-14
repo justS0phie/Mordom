@@ -54,6 +54,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fase: 2
   objetosInstanciados: 0
+  activateCannon: 0
   planeta: {fileID: 0}
 --- !u!114 &114511227689566700
 MonoBehaviour:
