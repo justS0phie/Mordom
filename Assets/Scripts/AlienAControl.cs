@@ -10,7 +10,7 @@ public class AlienAControl : MonoBehaviour {
 	Vector2 initSpeed;
 
     public GameObject planet;
-	private AlienSpawner parent;
+	private AlienSpawner spawner;
 
     void Start ()
     {
@@ -19,7 +19,8 @@ public class AlienAControl : MonoBehaviour {
 		initD = new Vector2(dx, dy).magnitude;
 		initSpeed = GetComponent<Rigidbody2D>().velocity;
 
-		parent = GameObject.FindGameObjectWithTag ("Respawn").GetComponent<AlienSpawner>();
+		if (GameObject.FindGameObjectWithTag ("Respawn"))
+			spawner = GameObject.FindGameObjectWithTag ("Respawn").gameObject.GetComponent<AlienSpawner> ();
     }
 	
 	// Update is called once per frame
@@ -34,9 +35,10 @@ public class AlienAControl : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D coll) {
 		if (coll.tag == "Tool") {
-			parent.addScore ();
+			spawner.addScore ();
 			Destroy (this.gameObject);
-			Destroy (coll.transform.parent.gameObject);
+			if (coll.gameObject.name=="missil")
+				Destroy (coll.transform.parent.gameObject);
 		}
 	}
 }

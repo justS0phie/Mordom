@@ -24,7 +24,8 @@ public class AlienBControl : MonoBehaviour {
 		phase = 1;
 		Timer = 0.0f;
 
-		parent = GameObject.FindGameObjectWithTag ("Respawn").GetComponent<AlienSpawner>();
+		if (GameObject.FindGameObjectWithTag ("Respawn"))
+			parent = GameObject.FindGameObjectWithTag ("Respawn").gameObject.GetComponent<AlienSpawner> ();
 	}
 
 	// Update is called once per frame
@@ -71,7 +72,8 @@ public class AlienBControl : MonoBehaviour {
 		if (coll.tag == "Tool") {
 			parent.addScore ();
 			Destroy (this.gameObject);
-			Destroy (coll.transform.parent.gameObject);
+			if (coll.gameObject.name == "missil")
+				Destroy (coll.transform.parent.gameObject);
 		}
 	}
 }

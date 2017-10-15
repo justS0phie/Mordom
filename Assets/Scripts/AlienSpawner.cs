@@ -95,9 +95,11 @@ public class AlienSpawner : MonoBehaviour {
 
 		if (type <= 2) {
 			GameObject newAlien = Instantiate (alienB, alienPos, alienA.transform.rotation);
+			newAlien.SetActive (true);
 			newAlien.GetComponent<Rigidbody2D> ().velocity = move * speed;
 		} else {
 			GameObject newAlien = Instantiate(alienA, alienPos, alienB.transform.rotation);
+			newAlien.SetActive (true);
 			newAlien.GetComponent<Rigidbody2D>().velocity = move * speed;
 		}
 

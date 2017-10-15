@@ -8,7 +8,13 @@ public class ControleDeFases : MonoBehaviour {
 
 	public bool objetosInstanciados;
 	bool prep;
+
 	public bool activateCannon;
+	public bool activateLaser;
+
+	private GameObject Cannon;
+	private GameObject LaserCannon;
+
 	private GameObject alienspawn;
 	private GameObject[] toolList;
 
@@ -18,6 +24,9 @@ public class ControleDeFases : MonoBehaviour {
 		fase = FaseDeJogo.NONE;
 
 		prep = false;
+
+		Cannon = GameObject.Find ("Cannon");
+		LaserCannon = GameObject.Find ("LaserCannon");
 
 		objetosInstanciados = false;
 		alienspawn = GameObject.FindGameObjectWithTag ("Respawn");
@@ -60,9 +69,13 @@ public class ControleDeFases : MonoBehaviour {
 		}
 
 		if (activateCannon && !Input.GetMouseButtonDown(0)){
-			foreach (GameObject tool in toolList)
-				tool.SetActive (true);
+			Cannon.SetActive (true);
 			activateCannon = false;
+		}
+
+		if (activateLaser && !Input.GetMouseButtonDown(0)){
+			LaserCannon.SetActive (true);
+			activateLaser = false;
 		}
 
 		if (fase == FaseDeJogo.Preparacao) {
