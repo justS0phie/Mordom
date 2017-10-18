@@ -48,10 +48,12 @@ public class ControleDeFases : MonoBehaviour {
 
 		case FaseDeJogo.Preparacao:
 			gameObject.GetComponent<ControleDeArraste> ().HabilitarArraste ();
+			Camera.main.GetComponent<CameraControl>().Enable();
 			break;
 
 		case FaseDeJogo.Jogo:
 			gameObject.GetComponent<ControleDeArraste> ().DesabilitarArraste ();
+			Camera.main.GetComponent<CameraControl>().Disable();
 			alienspawn.SetActive (true);
 			activateCannon = true;
 			break;
