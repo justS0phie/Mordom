@@ -141,7 +141,7 @@ GameObject:
   - component: {fileID: 4763443549322788}
   - component: {fileID: 212970154158060124}
   - component: {fileID: 58708058156208332}
-  - component: {fileID: 114821945082561138}
+  - component: {fileID: 114739498144388066}
   m_Layer: 0
   m_Name: Planet
   m_TagString: Planet
@@ -311,7 +311,6 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
@@ -326,20 +325,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1.6, y: 0.7}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 1.6, y: 0.7}
-  m_EdgeRadius: 0
 --- !u!61 &61956916819935224
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -351,20 +339,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1.6, y: 0.7}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 1.6, y: 0.7}
-  m_EdgeRadius: 0
 --- !u!114 &114065033310257412
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -428,7 +405,7 @@ MonoBehaviour:
   Damage: 10
   distanceShoot: 90
   BulletTrailPrefab: {fileID: 1023755439746176}
---- !u!114 &114821945082561138
+--- !u!114 &114739498144388066
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -436,10 +413,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1753184546706110}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 052cb30fdeadf1840864d41eeec4c3ab, type: 3}
+  m_Script: {fileID: 11500000, guid: 0364d80075ab56641ac4c7e4a6e759c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   elementoSendoArrastado: 0
+  minimumRadius: 4
 --- !u!114 &114895875068379256
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -482,7 +460,6 @@ LineRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Positions:
   - {x: 1, y: 0, z: 0}
@@ -503,15 +480,30 @@ LineRenderer:
       m_PostInfinity: 2
       m_RotationOrder: 4
     colorGradient:
-      serializedVersion: 2
-      key0: {r: 1, g: 0.5586207, b: 0, a: 1}
-      key1: {r: 1, g: 0.947, b: 0, a: 1}
-      key2: {r: 1, g: 0.947, b: 0, a: 0}
-      key3: {r: 0, g: 0, b: 0, a: 0}
-      key4: {r: 0, g: 0, b: 0, a: 0}
-      key5: {r: 0, g: 0, b: 0, a: 0}
-      key6: {r: 0, g: 0, b: 0, a: 0}
-      key7: {r: 0, g: 0, b: 0, a: 0}
+      key0:
+        serializedVersion: 2
+        rgba: 4294967295
+      key1:
+        serializedVersion: 2
+        rgba: 4294967295
+      key2:
+        serializedVersion: 2
+        rgba: 0
+      key3:
+        serializedVersion: 2
+        rgba: 0
+      key4:
+        serializedVersion: 2
+        rgba: 0
+      key5:
+        serializedVersion: 2
+        rgba: 0
+      key6:
+        serializedVersion: 2
+        rgba: 0
+      key7:
+        serializedVersion: 2
+        rgba: 0
       ctime0: 0
       ctime1: 65535
       ctime2: 65535
@@ -535,9 +527,7 @@ LineRenderer:
     numCapVertices: 0
     alignment: 0
     textureMode: 0
-    generateLightingData: 0
   m_UseWorldSpace: 0
-  m_Loop: 0
 --- !u!212 &212309661446056550
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -568,18 +558,11 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 4b03c6812714595418fc341aa4dbaac2, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 3.2, y: 4.48}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
 --- !u!212 &212653038098593722
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -610,18 +593,11 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 476c72e976eae3c4d84ac0845f4654d4, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1.6, y: 0.7}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
 --- !u!212 &212883145626321800
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -652,18 +628,11 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 0a7183b29ac9d534b95ac2c941b43b36, type: 3}
   m_Color: {r: 0.60294116, g: 0, b: 0.5364097, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 3.2, y: 4.48}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
 --- !u!212 &212969510786764762
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -694,18 +663,11 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 32d72aea28bd6744caff4bf36fdd7033, type: 3}
   m_Color: {r: 0, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1.6, y: 0.7}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
 --- !u!212 &212970154158060124
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -736,15 +698,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6ceaae69e656c474a9183d0644e6ff4d, type: 3}
   m_Color: {r: 1, g: 0.99264705, b: 0.99264705, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
