@@ -12,7 +12,7 @@ public class ArrasteDeElemento : MonoBehaviour {
 		elementoSendoArrastado = false;
 	}
 	
-	void Update () {
+	public virtual void Update () {
 
 		if(!elementoSendoArrastado) return;
 
