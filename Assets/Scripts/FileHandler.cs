@@ -52,9 +52,15 @@ public class FileHandler : MonoBehaviour {
 
 	public void save(){
 		string path = "Assets/Statistics.txt";
+		string[] lines = System.IO.File.ReadAllLines(path);
 		using (StreamWriter outfile = new StreamWriter(path))
 		{
 			outfile.WriteLine ("Estatísticas de Jogo:");
+			foreach (string line in lines) {
+				if (line == "Estatísticas de Jogo:")
+					continue;
+				outfile.WriteLine (line);
+			}
 			outfile.WriteLine ("");
 			outfile.WriteLine ("Tempo de jogo: " + time.ToString ());
 			outfile.WriteLine (score.ToString ());
