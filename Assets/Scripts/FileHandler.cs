@@ -62,6 +62,10 @@ public class FileHandler : MonoBehaviour {
 			outfile.WriteLine ("Total de Aliens: " + spawn.ToString ());
 			outfile.WriteLine ("Tamanho do planeta: " + (1/size).ToString () + "x");
 			outfile.WriteLine ("Posição do planeta: (" + position.x.ToString () + "," + position.y.ToString () + ")");
+			position = GameObject.Find ("Button1").transform.position;
+			outfile.WriteLine ("Posição Button1: (" + position.x.ToString () + "," + position.y.ToString () + ")");
+			position = GameObject.Find ("Button2").transform.position;
+			outfile.WriteLine ("Posição Button2: (" + position.x.ToString () + "," + position.y.ToString () + ")");
 		}
 	}
 }
