@@ -55,16 +55,20 @@
      <Compile Include="Assets\Scripts\AlienBControl.cs" />
      <Compile Include="Assets\Scripts\AlienSpawner.cs" />
      <Compile Include="Assets\Scripts\ArrasteDeElemento.cs" />
+     <Compile Include="Assets\Scripts\ArrasteDePlaneta.cs" />
      <Compile Include="Assets\Scripts\ButtonScripts.cs" />
      <Compile Include="Assets\Scripts\CameraControl.cs" />
      <Compile Include="Assets\Scripts\ControleDeArraste.cs" />
      <Compile Include="Assets\Scripts\ControleDeFases.cs" />
      <Compile Include="Assets\Scripts\FileHandler.cs" />
+     <Compile Include="Assets\Scripts\LaserShoot.cs" />
+     <Compile Include="Assets\Scripts\LaserTimer.cs" />
      <Compile Include="Assets\Scripts\MoveTrail.cs" />
      <Compile Include="Assets\Scripts\RestartButton.cs" />
      <Compile Include="Assets\Scripts\RotationCannon.cs" />
      <Compile Include="Assets\Scripts\Shoot.cs" />
      <Compile Include="Assets\Scripts\StartButton.cs" />
+     <Compile Include="Assets\Scripts\ToolButtons.cs" />
      <None Include="Assets\Statistics.txt" />
  <Reference Include="Facebook.Unity.Settings">
  <HintPath>C:/Users/Jonathan/Documents/CEFET Games/Mordom/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>

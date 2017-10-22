@@ -14,7 +14,7 @@ public class CameraControl : MonoBehaviour {
 	public float limxb;
 	public float limyb;
 
-	private bool enabled;
+	private bool isenabled;
 
 	void Start()
 	{
@@ -23,12 +23,12 @@ public class CameraControl : MonoBehaviour {
 		x = 0;
 		y = 0;
 
-		enabled = true;
+		isenabled = true;
 	}
 
 	void Update()
 	{
-		if(!enabled) return;
+		if(!isenabled) return;
 
 		orthoZoomSpeed = cam.orthographicSize/200;
 
@@ -75,10 +75,10 @@ public class CameraControl : MonoBehaviour {
 	}
 
 	public void Enable() {
-		enabled = true;
+		isenabled = true;
 	}
 
 	public void Disable() {
-		enabled = false;
+		isenabled = false;
 	}
 }
