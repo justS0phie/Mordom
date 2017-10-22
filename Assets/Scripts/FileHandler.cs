@@ -57,8 +57,8 @@ public class FileHandler : MonoBehaviour {
 			outfile.WriteLine ("Estatísticas de Jogo:");
 			outfile.WriteLine ("");
 			outfile.WriteLine ("Tempo de jogo: " + time.ToString ());
-			outfile.WriteLine ("Aliens mortos: " + score.ToString ());
-			outfile.WriteLine ("Vidas Perdidas: " + hit.ToString ());
+			outfile.WriteLine (score.ToString ());
+			outfile.WriteLine (hit.ToString ());
 			outfile.WriteLine ("Total de Aliens: " + spawn.ToString ());
 			outfile.WriteLine ("Tamanho do planeta: " + (1/size).ToString () + "x");
 			outfile.WriteLine ("Posição do planeta: (" + position.x.ToString () + "," + position.y.ToString () + ")");

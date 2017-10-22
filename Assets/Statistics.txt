@@ -1,8 +1,8 @@
 Estatísticas de Jogo:
 
-Tempo de jogo: 29.00012
-Aliens mortos: Aliens mortos: 20
-Vidas Perdidas: Vidas perdidas: 35
-Total de Aliens: 58
-Tamanho do planeta: 1x
-Posição do planeta: (0,0)
+Tempo de jogo: 9.034797
+Aliens mortos: 6
+Vidas perdidas: 7
+Total de Aliens: 18
+Tamanho do planeta: 0.9239701x
+Posição do planeta: (-0.6999999,0.3000001)
