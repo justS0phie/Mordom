@@ -1,4 +1,15 @@
 Assets/Statistics.txt
 Assets/Statistics.txt.meta
+Temp
 Temp/
+Temp/*
+Library
 Library/
+Library/*
+obj
+obj/
+obj/*
+.git/
+.vs/
+Assembly-CSharp.csproj
+Mordom.userprefs
