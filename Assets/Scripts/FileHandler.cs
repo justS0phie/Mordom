@@ -51,7 +51,15 @@ public class FileHandler : MonoBehaviour {
 	}
 
 	public void save(){
+		if (control.fase != FaseDeJogo.Jogo)
+			return;
 		string path = "Assets/Statistics.txt";
+		if (!System.IO.File.Exists(path))
+		{
+			System.IO.FileStream file = null;
+			file = new System.IO.FileStream(path, System.IO.FileMode.Create);
+			file.Close();
+		}
 		string[] lines = System.IO.File.ReadAllLines(path);
 		using (StreamWriter outfile = new StreamWriter(path))
 		{

@@ -7,7 +7,8 @@ public class ControleDeFases : MonoBehaviour {
 	public FaseDeJogo fase;
 
 	public bool objetosInstanciados;
-	bool prep;
+	public bool prep;
+	public int page = 0;
 
 	public bool activateCannon;
 	public bool activateLaser;
@@ -46,6 +47,12 @@ public class ControleDeFases : MonoBehaviour {
 
 		switch(fase) {
 
+		case FaseDeJogo.Instructions:
+			gameObject.GetComponent<ControleDeArraste> ().DesabilitarArraste ();
+			Camera.main.GetComponent<CameraControl>().Disable();
+			alienspawn.SetActive (false);
+			break;
+
 		case FaseDeJogo.Preparacao:
 			gameObject.GetComponent<ControleDeArraste> ().HabilitarArraste ();
 			Camera.main.GetComponent<CameraControl>().Enable();
@@ -60,13 +67,25 @@ public class ControleDeFases : MonoBehaviour {
 
 		}
 	}
+
+	void LateUpdate(){
+		if (page >= 1 && GameObject.Find ("instrucoes1"))
+			Destroy (GameObject.Find ("instrucoes1").gameObject);
+		if (page >= 2 && GameObject.Find ("instrucoes2"))
+			Destroy (GameObject.Find ("instrucoes2").gameObject);
+		if(Input.GetMouseButtonDown(0) && fase == FaseDeJogo.Instructions) {
+			page++;
+			if (page >= 2)
+				MudarDeFase (FaseDeJogo.Preparacao);
+		}
+	}
 	
 	void Update () {
 		//se os objetos a serem manipulados ainda nao estiverem instanciados, procurar na hierarquia pela tag
 		if (!objetosInstanciados)
 			ProcurarObjetos ();
 		else if (!prep) {
-			MudarDeFase (FaseDeJogo.Preparacao);
+			MudarDeFase (FaseDeJogo.Instructions);
 			prep = true;
 		}
 
@@ -80,7 +99,7 @@ public class ControleDeFases : MonoBehaviour {
 			activateLaser = false;
 		}
 
-		if (fase == FaseDeJogo.Preparacao) {
+		if (fase != FaseDeJogo.Jogo) {
 			GameObject[] alienList = GameObject.FindGameObjectsWithTag("Alien");
 
 			foreach (GameObject alien in alienList) {
@@ -104,8 +123,8 @@ public class ControleDeFases : MonoBehaviour {
 }
 
 public enum FaseDeJogo {
-
 	NONE,
+	Instructions,
 	Preparacao,
 	Jogo,
 }

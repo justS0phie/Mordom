@@ -8,7 +8,6 @@ public class ArrasteDeElemento : MonoBehaviour {
 	private Vector2 initialPos;
 
 	void Start () {
-
 		elementoSendoArrastado = false;
 	}
 	
@@ -35,6 +34,9 @@ public class ArrasteDeElemento : MonoBehaviour {
 					transform.position = initialPos;
 			}
 		}
+		GameObject planeta = GameObject.Find ("Planet");
+		if (this.gameObject.GetComponent<Collider2D> ().IsTouching (planeta.GetComponent<Collider2D> ()))
+			transform.position = initialPos;
 	}
 
 	public void OnMouseEnter() {

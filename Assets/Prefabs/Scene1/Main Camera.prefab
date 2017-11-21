@@ -247,8 +247,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: -30}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 224219443574189796}
   - {fileID: 4908030093730194}
+  - {fileID: 224219443574189796}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -362,7 +362,7 @@ Transform:
   - {fileID: 4938320262972520}
   - {fileID: 4267571571142676}
   m_Father: {fileID: 4148370766459076}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4938320262972520
 Transform:
@@ -640,6 +640,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   handler: {fileID: 0}
+  control: {fileID: 0}
 --- !u!114 &114348632388847658
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -815,7 +816,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
 --- !u!212 &212404134973842906
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -857,7 +857,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
 --- !u!212 &212424831800831540
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -899,7 +898,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
 --- !u!212 &212589319985280450
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -941,7 +939,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
 --- !u!212 &212849149963541992
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -983,7 +980,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
 --- !u!212 &212983327235763132
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -1025,7 +1021,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
 --- !u!222 &222007861739875166
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -1071,7 +1066,7 @@ RectTransform:
   - {fileID: 224798432260970554}
   - {fileID: 224314427445230374}
   m_Father: {fileID: 4148370766459076}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
