@@ -21,10 +21,10 @@ MonoBehaviour:
     y: 30
     width: 1366
     height: 635
-  m_MinSize: {x: 713, y: 492}
-  m_MaxSize: {x: 18008, y: 14042}
+  m_MinSize: {x: 711, y: 471}
+  m_MaxSize: {x: 18006, y: 14021}
   vertical: 0
-  controlID: 135
+  controlID: 1803
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -124,7 +124,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 442}
   m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
-  controlID: 47
+  controlID: 1729
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -178,14 +178,14 @@ MonoBehaviour:
     width: 819
     height: 325
   m_SceneLighting: 1
-  lastFramingTime: 4797.104231401228
+  lastFramingTime: 7336.763284852867
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.01, y: -0.07, z: 0}
+    m_Target: {x: 0.010000229, y: -0.069999695, z: -27}
     speed: 2
-    m_Value: {x: 0.01, y: -0.07, z: 0}
+    m_Value: {x: 0.010000229, y: -0.069999695, z: -27}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -212,9 +212,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 22
+    m_Target: 22.585192
     speed: 2
-    m_Value: 22
+    m_Value: 22.585192
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -262,7 +262,6 @@ MonoBehaviour:
   blendTreeGraph: {fileID: 0}
   blendTreeGraphGUI: {fileID: 0}
   m_AutoLiveLink: 1
-  m_LiveLinkFollowTransitions: 0
   m_MiniTool: 0
   m_SerializedLocked: 0
   m_CurrentEditor: 1
@@ -286,8 +285,8 @@ MonoBehaviour:
     y: 346
     width: 821
     height: 289
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 2}
   m_Panes:
   - {fileID: 2}
@@ -340,10 +339,10 @@ MonoBehaviour:
     y: 0
     width: 250
     height: 635
-  m_MinSize: {x: 234, y: 492}
-  m_MaxSize: {x: 10004, y: 14042}
+  m_MinSize: {x: 234, y: 471}
+  m_MaxSize: {x: 10004, y: 14021}
   vertical: 1
-  controlID: 93
+  controlID: 1779
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -361,9 +360,9 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 250
-    height: 348
-  m_MinSize: {x: 204, y: 221}
-  m_MaxSize: {x: 4004, y: 4021}
+    height: 304
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 11}
   m_Panes:
   - {fileID: 11}
@@ -394,12 +393,12 @@ MonoBehaviour:
     x: 823
     y: 92
     width: 246
-    height: 327
+    height: 283
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 4697ffff
-    m_LastClickedID: 0
-    m_ExpandedIDs: f0b8ffff6cf6ffff3af7ffff6efbffff70fbffffe0fbffff00000000
+    m_SelectedIDs: 14390000
+    m_LastClickedID: 14612
+    m_ExpandedIDs: 068cfeffaa8cfeffb68dfeffc00effff640fffff7010ffff2878ffffcc78ffffd279ffffa07effff047fffff0a80ffff16fcffff18fcffff000000007e3400002a390000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -437,9 +436,9 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 348
+    y: 304
     width: 250
-    height: 287
+    height: 331
   m_MinSize: {x: 230, y: 250}
   m_MaxSize: {x: 10000, y: 10000}
   m_ActualView: {fileID: 13}
@@ -470,15 +469,16 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 823
-    y: 440
+    y: 396
     width: 246
-    height: 266
+    height: 310
   m_SearchFilter:
     m_NameFilter: 
     m_ClassNames: []
     m_AssetLabels: []
     m_AssetBundleNames: []
     m_VersionControlStates: []
+    m_SoftLockControlStates: []
     m_ReferencingInstanceIDs: 
     m_ScenePaths: []
     m_ShowAllHits: 0
@@ -488,13 +488,13 @@ MonoBehaviour:
   m_StartGridSize: 16
   m_LastFolders: []
   m_LastFoldersGridSize: 16
-  m_LastProjectPath: C:\Users\jonathan\Documents\CEFET Games\Mordom
+  m_LastProjectPath: C:\Users\afp11\OneDrive\Documentos\CEFET-MG\TCC\Mordom
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 00ca9a3b
     m_LastClickedID: 1000000000
-    m_ExpandedIDs: 000000001e250000be250000d225000000260000
+    m_ExpandedIDs: 000000007c260000be260000c8260000d2260000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -520,9 +520,9 @@ MonoBehaviour:
       m_ResourceFile: 
   m_AssetTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 4697ffff
-    m_LastClickedID: -26810
-    m_ExpandedIDs: 000000001e25000076250000bc250000d2250000e0250000
+    m_SelectedIDs: 14390000
+    m_LastClickedID: 0
+    m_ExpandedIDs: 000000007c260000be260000c8260000d2260000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -547,8 +547,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 4697ffff
-    m_LastClickedInstanceID: -26810
+    m_SelectedInstanceIDs: 14390000
+    m_LastClickedInstanceID: 14612
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 
     m_RenameOverlay:
@@ -595,8 +595,8 @@ MonoBehaviour:
     y: 0
     width: 295
     height: 635
-  m_MinSize: {x: 277, y: 71}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
