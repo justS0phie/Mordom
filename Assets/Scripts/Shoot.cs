@@ -26,7 +26,7 @@ public class Shoot : MonoBehaviour {
             {
                 Shooting();
             }
-        }else
+        } else
         {
             if (Input.GetButton ("Fire1") && Time.time > timeToFire)
             {

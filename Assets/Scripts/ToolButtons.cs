@@ -21,10 +21,17 @@ public class ToolButtons : MonoBehaviour {
 				tool.SetActive (false);
 
 			if (this.name == "Button1")
-				control.activateCannon = true;
+            {
+                control.activateCannon = true;
+                control.activateLaser = false;
+            }
 
 			if (this.name == "Button2")
-				control.activateLaser = true;
+            {
+                control.activateLaser = true;
+                control.activateCannon = false;
+            }
+			
 		}
 	}
 }

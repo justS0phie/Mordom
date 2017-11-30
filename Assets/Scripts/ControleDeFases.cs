@@ -90,14 +90,16 @@ public class ControleDeFases : MonoBehaviour {
 		}
 
 		if (activateCannon && !Input.GetMouseButtonDown(0)){
-			Cannon.SetActive (true);
+			Cannon.SetActive(true);
 			activateCannon = false;
-		}
+            LaserCannon.SetActive(false);
+        }
 
 		if (activateLaser && !Input.GetMouseButtonDown(0)){
-			LaserCannon.SetActive (true);
+			LaserCannon.SetActive(true);
 			activateLaser = false;
-		}
+            Cannon.SetActive(false);
+        }
 
 		if (fase != FaseDeJogo.Jogo) {
 			GameObject[] alienList = GameObject.FindGameObjectsWithTag("Alien");

@@ -26,7 +26,7 @@ public class LaserShoot : MonoBehaviour {
 		}
 		float now = Time.time;
 		chargeTimer = now - chargeBegin;
-		if (chargeTimer > 1f && charging) 
+		if (chargeTimer > 0.05f && charging) 
 		{
 			Shooting();
 			charging = false;
