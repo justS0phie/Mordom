@@ -108,6 +108,7 @@ public class ControleDeFases : MonoBehaviour {
 				Destroy (alien);
 			}
 		}
+
 	}
 
 	private void ProcurarObjetos() {
