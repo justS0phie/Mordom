@@ -8,6 +8,10 @@ public class InstrControl : MonoBehaviour {
 	
 	void Awake(){
 		DontDestroyOnLoad (transform.gameObject);
+		if (FindObjectsOfType (GetType ()).Length > 1) {
+			Destroy (gameObject);
+			Destroy (GameObject.Find ("Instrucao").gameObject);
+		}
 	}
 
 	void Update () {

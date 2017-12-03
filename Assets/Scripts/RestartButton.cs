@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class RestartButton : MonoBehaviour {
 
 	GameObject alienspawn;
-	ControleDeFases script;
 	public FileHandler handler;
 	public GameObject control;
 
@@ -17,7 +16,6 @@ public class RestartButton : MonoBehaviour {
 	void OnMouseDown(){
         //handler.save ();
 		SceneManager.LoadScene (SceneManager.GetActiveScene().name);
-        script.MudarDeFase(FaseDeJogo.Preparacao);
         control.SetActive (true);     
 	}
 

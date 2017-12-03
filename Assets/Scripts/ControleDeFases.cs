@@ -18,6 +18,8 @@ public class ControleDeFases : MonoBehaviour {
 
 	private GameObject alienspawn;
 	private GameObject[] toolList;
+	private GameObject startButton;
+	private GameObject resetButton;
 
 	public GameObject planeta;
 
@@ -55,7 +57,9 @@ public class ControleDeFases : MonoBehaviour {
 
 		case FaseDeJogo.Preparacao:
 			gameObject.GetComponent<ControleDeArraste> ().HabilitarArraste ();
-			Camera.main.GetComponent<CameraControl>().Enable();
+			Camera.main.GetComponent<CameraControl> ().Enable ();
+			startButton.SetActive (true);
+			resetButton.SetActive (true);
 			break;
 
 		case FaseDeJogo.Jogo:
@@ -108,6 +112,18 @@ public class ControleDeFases : MonoBehaviour {
 				Destroy (alien);
 			}
 		}
+
+		if (!startButton)
+			startButton = GameObject.Find ("StartButton");
+
+		if (startButton && fase == FaseDeJogo.Instructions)
+			startButton.SetActive (false);
+
+		if (!resetButton)
+			resetButton = GameObject.Find ("ResetButton");
+
+		if (resetButton && fase == FaseDeJogo.Instructions)
+			resetButton.SetActive (false);
 
 	}
 
