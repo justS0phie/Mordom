@@ -20,6 +20,8 @@ public class ControleDeFases : MonoBehaviour {
 	private GameObject[] toolList;
 	private GameObject startButton;
 	private GameObject resetButton;
+	private GameObject page1;
+	private GameObject page2;
 
 	public GameObject planeta;
 
@@ -73,12 +75,13 @@ public class ControleDeFases : MonoBehaviour {
 	}
 
 	void LateUpdate(){
-		if (page >= 1 && GameObject.Find ("instrucoes1"))
-			Destroy (GameObject.Find ("instrucoes1").gameObject);
-		if (page >= 2 && GameObject.Find ("instrucoes2"))
-			Destroy (GameObject.Find ("instrucoes2").gameObject);
+		setPage (page);
 		if(Input.GetMouseButtonDown(0) && fase == FaseDeJogo.Instructions) {
-			page++;
+			float middle = Screen.width / 2;
+			if (Input.mousePosition.x > middle)
+				page++;
+			else if (page > 0)
+				page--;
 			if (page >= 2)
 				MudarDeFase (FaseDeJogo.Preparacao);
 		}
@@ -125,6 +128,12 @@ public class ControleDeFases : MonoBehaviour {
 		if (resetButton && fase == FaseDeJogo.Instructions)
 			resetButton.SetActive (false);
 
+		if (!page1)
+			page1 = GameObject.Find ("instrucoes1");
+
+		if (!page2)
+			page2 = GameObject.Find ("instrucoes2");
+
 	}
 
 	private void ProcurarObjetos() {
@@ -138,6 +147,15 @@ public class ControleDeFases : MonoBehaviour {
 		//definir objetosInstanciados como true
 		if(planeta != null)
 			objetosInstanciados = true;
+	}
+
+	private void setPage(int pageNumber){
+		page1.SetActive (false);
+		page2.SetActive (false);
+		if (pageNumber==0)
+			page1.SetActive (true);
+		if (pageNumber==1)
+			page2.SetActive (true);
 	}
 }
 
