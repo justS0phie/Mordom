@@ -16,7 +16,7 @@ public class RestartButton : MonoBehaviour {
 	void OnMouseDown(){
         //handler.save ();
 		SceneManager.LoadScene (SceneManager.GetActiveScene().name);
-        control.SetActive (true);     
+        control.SetActive (false);     
 	}
 
 }
