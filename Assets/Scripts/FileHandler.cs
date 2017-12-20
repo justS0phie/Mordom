@@ -53,7 +53,7 @@ public class FileHandler : MonoBehaviour {
 	public void save(){
 		if (control.fase != FaseDeJogo.Jogo)
 			return;
-		string path = "Assets/Statistics.txt";
+		string path = Application.persistentDataPath + "/Statistics.txt";
 		if (!System.IO.File.Exists(path))
 		{
 			System.IO.FileStream file = null;

@@ -56,7 +56,7 @@ public class AlienSpawner : MonoBehaviour {
 
     void CreateAlien()
     {
-
+		
         Vector2 planetPosition = new Vector2(planet.transform.position.x, planet.transform.position.y);
         
 		int side = Random.Range(1, 5);

@@ -60,8 +60,10 @@ public class ControleDeFases : MonoBehaviour {
 		case FaseDeJogo.Preparacao:
 			gameObject.GetComponent<ControleDeArraste> ().HabilitarArraste ();
 			Camera.main.GetComponent<CameraControl> ().Enable ();
-			startButton.SetActive (true);
-			resetButton.SetActive (true);
+			if (startButton)
+				startButton.SetActive (true);
+			if (resetButton)
+				resetButton.SetActive (true);
 			break;
 
 		case FaseDeJogo.Jogo:
@@ -150,11 +152,13 @@ public class ControleDeFases : MonoBehaviour {
 	}
 
 	private void setPage(int pageNumber){
-		page1.SetActive (false);
-		page2.SetActive (false);
-		if (pageNumber==0)
+		if (page1)
+			page1.SetActive (false);
+		if (page2)
+			page2.SetActive (false);
+		if (page1 && pageNumber==0)
 			page1.SetActive (true);
-		if (pageNumber==1)
+		if (page2 && pageNumber==1)
 			page2.SetActive (true);
 	}
 }
