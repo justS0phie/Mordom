@@ -61,9 +61,9 @@
      <Compile Include="Assets\Scripts\ControleDeArraste.cs" />
      <Compile Include="Assets\Scripts\ControleDeFases.cs" />
      <Compile Include="Assets\Scripts\FileHandler.cs" />
-     <Compile Include="Assets\Scripts\InstrControl.cs" />
      <Compile Include="Assets\Scripts\LaserShoot.cs" />
      <Compile Include="Assets\Scripts\LaserTimer.cs" />
+     <Compile Include="Assets\Scripts\Menu\MenuBtn.cs" />
      <Compile Include="Assets\Scripts\MoveTrail.cs" />
      <Compile Include="Assets\Scripts\RestartButton.cs" />
      <Compile Include="Assets\Scripts\RotationCannon.cs" />

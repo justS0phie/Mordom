@@ -7,17 +7,12 @@ public class RestartButton : MonoBehaviour {
 
 	GameObject alienspawn;
 	public FileHandler handler;
-	public GameObject control;
 
-	void Start(){
-		control.SetActive (false);
-	}
+	void Start(){}
 
 	void OnMouseDown(){
         handler.save ();
-		SceneManager.LoadScene (SceneManager.GetActiveScene().name);
-		if (control)
-			control.SetActive (true);     
+		SceneManager.LoadScene (SceneManager.GetActiveScene().name);    
 	}
 
 }

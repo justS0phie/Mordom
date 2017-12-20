@@ -51,13 +51,8 @@ public class ControleDeFases : MonoBehaviour {
 
 		switch(fase) {
 
-		case FaseDeJogo.Instructions:
-			gameObject.GetComponent<ControleDeArraste> ().DesabilitarArraste ();
-			Camera.main.GetComponent<CameraControl>().Disable();
-			alienspawn.SetActive (false);
-			break;
-
 		case FaseDeJogo.Preparacao:
+			alienspawn.SetActive (false);
 			gameObject.GetComponent<ControleDeArraste> ().HabilitarArraste ();
 			Camera.main.GetComponent<CameraControl> ().Enable ();
 			if (startButton)
@@ -75,26 +70,13 @@ public class ControleDeFases : MonoBehaviour {
 
 		}
 	}
-
-	void LateUpdate(){
-		setPage (page);
-		if(Input.GetMouseButtonDown(0) && fase == FaseDeJogo.Instructions) {
-			float middle = Screen.width / 2;
-			if (Input.mousePosition.x > middle)
-				page++;
-			else if (page > 0)
-				page--;
-			if (page >= 2)
-				MudarDeFase (FaseDeJogo.Preparacao);
-		}
-	}
-	
+		
 	void Update () {
 		//se os objetos a serem manipulados ainda nao estiverem instanciados, procurar na hierarquia pela tag
 		if (!objetosInstanciados)
 			ProcurarObjetos ();
 		else if (!prep) {
-			MudarDeFase (FaseDeJogo.Instructions);
+			MudarDeFase (FaseDeJogo.Preparacao);
 			prep = true;
 		}
 
@@ -117,25 +99,6 @@ public class ControleDeFases : MonoBehaviour {
 				Destroy (alien);
 			}
 		}
-
-		if (!startButton)
-			startButton = GameObject.Find ("StartButton");
-
-		if (startButton && fase == FaseDeJogo.Instructions)
-			startButton.SetActive (false);
-
-		if (!resetButton)
-			resetButton = GameObject.Find ("ResetButton");
-
-		if (resetButton && fase == FaseDeJogo.Instructions)
-			resetButton.SetActive (false);
-
-		if (!page1)
-			page1 = GameObject.Find ("instrucoes1");
-
-		if (!page2)
-			page2 = GameObject.Find ("instrucoes2");
-
 	}
 
 	private void ProcurarObjetos() {
@@ -165,7 +128,6 @@ public class ControleDeFases : MonoBehaviour {
 
 public enum FaseDeJogo {
 	NONE,
-	Instructions,
 	Preparacao,
 	Jogo,
 }
