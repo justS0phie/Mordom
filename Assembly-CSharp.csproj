@@ -64,6 +64,12 @@
      <Compile Include="Assets\Scripts\Menu\LevelSelect.cs" />
      <Compile Include="Assets\Scripts\Menu\MenuBtn.cs" />
      <Compile Include="Assets\Scripts\Menu\Options.cs" />
+     <Compile Include="Assets\Scripts\Story-Only\GameBtns.cs" />
+     <Compile Include="Assets\Scripts\Story-Only\MenuBtns.cs" />
+     <Compile Include="Assets\Scripts\Story-Only\PhaseControl.cs" />
+     <Compile Include="Assets\Scripts\Story-Only\Save_Data.cs" />
+     <Compile Include="Assets\Scripts\Story-Only\WaveControl.cs" />
+     <Compile Include="Assets\Scripts\Story-Only\WeaponControl.cs" />
      <Compile Include="Assets\Scripts\Survival-Only\AlienAControl.cs" />
      <Compile Include="Assets\Scripts\Survival-Only\AlienBControl.cs" />
      <Compile Include="Assets\Scripts\Survival-Only\AlienSpawner.cs" />

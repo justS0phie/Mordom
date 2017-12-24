@@ -8,6 +8,7 @@ TagManager:
   - Planet
   - Tool
   - Button
+  - Shot
   layers:
   - Default
   - TransparentFX
