@@ -18,10 +18,6 @@ public class ControleDeFases : MonoBehaviour {
 
 	private GameObject alienspawn;
 	private GameObject[] toolList;
-	private GameObject startButton;
-	private GameObject resetButton;
-	private GameObject page1;
-	private GameObject page2;
 
 	public GameObject planeta;
 
@@ -55,10 +51,6 @@ public class ControleDeFases : MonoBehaviour {
 			alienspawn.SetActive (false);
 			gameObject.GetComponent<ControleDeArraste> ().HabilitarArraste ();
 			Camera.main.GetComponent<CameraControl> ().Enable ();
-			if (startButton)
-				startButton.SetActive (true);
-			if (resetButton)
-				resetButton.SetActive (true);
 			break;
 
 		case FaseDeJogo.Jogo:
@@ -113,17 +105,7 @@ public class ControleDeFases : MonoBehaviour {
 		if(planeta != null)
 			objetosInstanciados = true;
 	}
-
-	private void setPage(int pageNumber){
-		if (page1)
-			page1.SetActive (false);
-		if (page2)
-			page2.SetActive (false);
-		if (page1 && pageNumber==0)
-			page1.SetActive (true);
-		if (page2 && pageNumber==1)
-			page2.SetActive (true);
-	}
+		
 }
 
 public enum FaseDeJogo {
