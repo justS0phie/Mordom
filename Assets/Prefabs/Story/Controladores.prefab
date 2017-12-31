@@ -80,6 +80,7 @@ MonoBehaviour:
   phase: 0
   enemyspawn: {fileID: 0}
   planet: {fileID: 0}
+  startButton: {fileID: 0}
 --- !u!114 &114488006222395922
 MonoBehaviour:
   m_ObjectHideFlags: 1

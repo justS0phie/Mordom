@@ -21,9 +21,9 @@ GameObject:
   - component: {fileID: 4790915171616468}
   - component: {fileID: 212363537843498950}
   - component: {fileID: 50663611938627258}
-  - component: {fileID: 114579308044008328}
-  - component: {fileID: 60823391754335132}
   - component: {fileID: 60197530529293128}
+  - component: {fileID: 114183058219565974}
+  - component: {fileID: 114988418649298246}
   m_Layer: 0
   m_Name: Alien B
   m_TagString: Alien
@@ -41,9 +41,9 @@ GameObject:
   - component: {fileID: 4933459956655224}
   - component: {fileID: 212949716227710340}
   - component: {fileID: 50491802765204078}
-  - component: {fileID: 114724073007632390}
-  - component: {fileID: 60616529868570378}
   - component: {fileID: 60266475071560746}
+  - component: {fileID: 114738998101304098}
+  - component: {fileID: 114243324895137976}
   m_Layer: 0
   m_Name: Alien A
   m_TagString: Alien
@@ -59,7 +59,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4396623440880522}
-  - component: {fileID: 114512997119037574}
+  - component: {fileID: 114110400420028320}
   m_Layer: 0
   m_Name: Alien
   m_TagString: Respawn
@@ -216,75 +216,7 @@ PolygonCollider2D:
       - {x: 0, y: 0.5}
       - {x: 0.2938925, y: 0.4045086}
       - {x: 0.47552824, y: 0.15450859}
---- !u!60 &60616529868570378
-PolygonCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1218905373284228}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.47552824, y: -0.15450853}
-      - {x: 0.29389268, y: -0.40450847}
-      - {x: 0.000000059604645, y: -0.5}
-      - {x: -0.2938926, y: -0.40450853}
-      - {x: -0.47552824, y: -0.15450853}
-      - {x: -0.4755283, y: 0.15450847}
-      - {x: -0.29389262, y: 0.40450847}
-      - {x: 0, y: 0.5}
-      - {x: 0.2938925, y: 0.4045086}
-      - {x: 0.47552824, y: 0.15450859}
---- !u!60 &60823391754335132
-PolygonCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1080712011594564}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.47552824, y: -0.15450853}
-      - {x: 0.29389268, y: -0.40450847}
-      - {x: 0.000000059604645, y: -0.5}
-      - {x: -0.2938926, y: -0.40450853}
-      - {x: -0.47552824, y: -0.15450853}
-      - {x: -0.4755283, y: 0.15450847}
-      - {x: -0.29389262, y: 0.40450847}
-      - {x: 0, y: 0.5}
-      - {x: 0.2938925, y: 0.4045086}
-      - {x: 0.47552824, y: 0.15450859}
---- !u!114 &114512997119037574
+--- !u!114 &114110400420028320
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -292,16 +224,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1921050459806154}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca264ed9a24d4b945b652a8076f82cd9, type: 3}
+  m_Script: {fileID: 11500000, guid: 35a10ec75a515b7448e44482ab7fae90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alienA: {fileID: 1218905373284228}
-  alienB: {fileID: 1080712011594564}
+  Enemy:
+  - {fileID: 1218905373284228}
+  - {fileID: 1080712011594564}
   planet: {fileID: 0}
-  scoreTxt: {fileID: 0}
-  livesTxt: {fileID: 0}
+  timer: 0
   spawnNumber: 0
---- !u!114 &114579308044008328
+  spawnRate: 0.5
+--- !u!114 &114183058219565974
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -309,11 +242,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1080712011594564}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1f34c3a3c6902d4a9c1cc8a1dafb5d0, type: 3}
+  m_Script: {fileID: 11500000, guid: 1679a4d03a2548b46a4478da4c32806a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  planet: {fileID: 0}
---- !u!114 &114724073007632390
+--- !u!114 &114243324895137976
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -321,7 +253,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 1218905373284228}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8901e7985eb41594da6cab2f8ab57896, type: 3}
+  m_Script: {fileID: 11500000, guid: 59d923844ed3d8344b12143d8d54d992, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  planet: {fileID: 0}
+--- !u!114 &114738998101304098
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1218905373284228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1679a4d03a2548b46a4478da4c32806a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114988418649298246
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1080712011594564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa089c8cf6ed6be48b44809c915c7712, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   planet: {fileID: 0}

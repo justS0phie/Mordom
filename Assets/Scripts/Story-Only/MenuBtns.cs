@@ -13,7 +13,6 @@ public class MenuBtns : MonoBehaviour {
 			GameObject controller = GameObject.FindGameObjectWithTag ("GameController");
 			controller.GetComponent<PhaseControl>().ChangePhase(GamePhase.Game);
 			controller.GetComponent<WaveControl> ().StartWave ();
-			gameObject.SetActive (false);
 		}
 
 		if (name == "RestartButton") {

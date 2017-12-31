@@ -8,6 +8,7 @@ public class PhaseControl : MonoBehaviour {
 
 	public GameObject enemyspawn;
 	public GameObject planet;
+	public GameObject startButton;
 
 	void Start () {
 		phase = GamePhase.NONE;
@@ -23,6 +24,8 @@ public class PhaseControl : MonoBehaviour {
 			enemyspawn.SetActive (false);
 			gameObject.GetComponent<ControleDeArraste> ().HabilitarArraste ();
 			Camera.main.GetComponent<CameraControl> ().Enable ();
+			gameObject.GetComponent<WeaponControl> ().ChangeWeapon ("none");
+			startButton.SetActive (true);
 			break;
 
 		case GamePhase.Game:
@@ -30,22 +33,17 @@ public class PhaseControl : MonoBehaviour {
 			Camera.main.GetComponent<CameraControl> ().Disable ();
 			enemyspawn.SetActive (true);
 			gameObject.GetComponent<WeaponControl> ().ChangeWeapon ("Cannon");
+			startButton.SetActive (false);
 			break;
 
 		case GamePhase.Shop:
+			gameObject.GetComponent<ControleDeArraste> ().DesabilitarArraste ();
+			Camera.main.GetComponent<CameraControl> ().Disable ();
+			gameObject.GetComponent<WeaponControl> ().ChangeWeapon ("none");
+			enemyspawn.SetActive (false);
+			startButton.SetActive (true);
 			break;
 
-		}
-	}
-
-	void Update () {
-
-		if (phase != GamePhase.Game) {
-			GameObject[] enemyList = GameObject.FindGameObjectsWithTag("Alien");
-
-			foreach (GameObject enemy in enemyList) {
-				Destroy (enemy);
-			}
 		}
 	}
 }

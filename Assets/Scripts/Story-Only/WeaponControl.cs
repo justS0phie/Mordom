@@ -24,6 +24,9 @@ public class WeaponControl : MonoBehaviour {
 					tool.SetActive (false);
 			weapon = "";
 		}
+		if (weapon == "none")
+			foreach (GameObject tool in toolList)
+				tool.SetActive (false);
 	}
 
 	public void ChangeWeapon(string Wpn_Name)

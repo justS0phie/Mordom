@@ -108,6 +108,11 @@ NavMeshSettings:
     tileSize: 256
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &433193955 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1974493483831030, guid: 60fe524eb8258e948867f9c721851a09,
+    type: 2}
+  m_PrefabInternal: {fileID: 1050965698}
 --- !u!1 &727999132 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1921050459806154, guid: 0aa273ea97aa64a4caabac046de41cd5,
@@ -152,27 +157,17 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114512997119037574, guid: 0aa273ea97aa64a4caabac046de41cd5,
+    - target: {fileID: 114110400420028320, guid: 0aa273ea97aa64a4caabac046de41cd5,
         type: 2}
       propertyPath: planet
       value: 
       objectReference: {fileID: 1668480796}
-    - target: {fileID: 114512997119037574, guid: 0aa273ea97aa64a4caabac046de41cd5,
-        type: 2}
-      propertyPath: scoreTxt
-      value: 
-      objectReference: {fileID: 1214671962}
-    - target: {fileID: 114512997119037574, guid: 0aa273ea97aa64a4caabac046de41cd5,
-        type: 2}
-      propertyPath: livesTxt
-      value: 
-      objectReference: {fileID: 1214671961}
-    - target: {fileID: 114724073007632390, guid: 0aa273ea97aa64a4caabac046de41cd5,
+    - target: {fileID: 114243324895137976, guid: 0aa273ea97aa64a4caabac046de41cd5,
         type: 2}
       propertyPath: planet
       value: 
       objectReference: {fileID: 1668480796}
-    - target: {fileID: 114579308044008328, guid: 0aa273ea97aa64a4caabac046de41cd5,
+    - target: {fileID: 114988418649298246, guid: 0aa273ea97aa64a4caabac046de41cd5,
         type: 2}
       propertyPath: planet
       value: 
@@ -296,21 +291,14 @@ Prefab:
       propertyPath: planet
       value: 
       objectReference: {fileID: 1668480796}
+    - target: {fileID: 114357195701369736, guid: fe651e8553aadeb46b7463f7479d6225,
+        type: 2}
+      propertyPath: startButton
+      value: 
+      objectReference: {fileID: 433193955}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fe651e8553aadeb46b7463f7479d6225, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &1214671961 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114028011350031972, guid: 60fe524eb8258e948867f9c721851a09,
-    type: 2}
-  m_PrefabInternal: {fileID: 1050965698}
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
---- !u!114 &1214671962 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114125482070451256, guid: 60fe524eb8258e948867f9c721851a09,
-    type: 2}
-  m_PrefabInternal: {fileID: 1050965698}
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &1414174711
 Prefab:
   m_ObjectHideFlags: 0

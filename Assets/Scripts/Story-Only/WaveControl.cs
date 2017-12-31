@@ -18,18 +18,27 @@ public class WaveControl : MonoBehaviour {
 	}
 	
 	void Update () {
-		if (control.phase == GamePhase.Game) {
+		if (control.phase == GamePhase.Game)
 			waveTimer = Time.time - initTimer;
-			enemies = GameObject.FindGameObjectsWithTag ("Alien");
-			if (waveTimer > 3 && enemies.Length==0)
-			{
-				wave++;
-				control.ChangePhase(GamePhase.Prep);
-			}
-		}
 	}
 
 	public void StartWave() {
 		initTimer = Time.time;
+	}
+
+	public void endWave() {
+		wave++;
+		EnemySpawn spawn = GameObject.FindGameObjectWithTag ("Respawn").GetComponent<EnemySpawn>();
+		spawn.timer = 0;
+		spawn.spawnNumber = 0;
+		control.ChangePhase(GamePhase.Prep);
+	}
+
+	public int[] getEnemyData(int turn){
+		return new int[] {0,5};
+	}
+
+	public int getWaveAmount(){
+		return 20;
 	}
 }
