@@ -157,7 +157,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114110400420028320, guid: 0aa273ea97aa64a4caabac046de41cd5,
+    - target: {fileID: 114988418649298246, guid: 0aa273ea97aa64a4caabac046de41cd5,
         type: 2}
       propertyPath: planet
       value: 
@@ -167,7 +167,7 @@ Prefab:
       propertyPath: planet
       value: 
       objectReference: {fileID: 1668480796}
-    - target: {fileID: 114988418649298246, guid: 0aa273ea97aa64a4caabac046de41cd5,
+    - target: {fileID: 114110400420028320, guid: 0aa273ea97aa64a4caabac046de41cd5,
         type: 2}
       propertyPath: planet
       value: 
@@ -214,31 +214,31 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114230184028054432, guid: 60fe524eb8258e948867f9c721851a09,
+        type: 2}
+      propertyPath: p_control
+      value: 
+      objectReference: {fileID: 1463510681}
+    - target: {fileID: 114230184028054432, guid: 60fe524eb8258e948867f9c721851a09,
+        type: 2}
+      propertyPath: w_control
+      value: 
+      objectReference: {fileID: 1463510685}
+    - target: {fileID: 114685774423005812, guid: 60fe524eb8258e948867f9c721851a09,
+        type: 2}
+      propertyPath: p_control
+      value: 
+      objectReference: {fileID: 1463510681}
+    - target: {fileID: 114685774423005812, guid: 60fe524eb8258e948867f9c721851a09,
+        type: 2}
+      propertyPath: w_control
+      value: 
+      objectReference: {fileID: 1463510685}
     - target: {fileID: 114298463933936506, guid: 60fe524eb8258e948867f9c721851a09,
         type: 2}
       propertyPath: handler
       value: 
       objectReference: {fileID: 1463510684}
-    - target: {fileID: 114685774423005812, guid: 60fe524eb8258e948867f9c721851a09,
-        type: 2}
-      propertyPath: p_control
-      value: 
-      objectReference: {fileID: 1463510681}
-    - target: {fileID: 114685774423005812, guid: 60fe524eb8258e948867f9c721851a09,
-        type: 2}
-      propertyPath: w_control
-      value: 
-      objectReference: {fileID: 1463510685}
-    - target: {fileID: 114230184028054432, guid: 60fe524eb8258e948867f9c721851a09,
-        type: 2}
-      propertyPath: p_control
-      value: 
-      objectReference: {fileID: 1463510681}
-    - target: {fileID: 114230184028054432, guid: 60fe524eb8258e948867f9c721851a09,
-        type: 2}
-      propertyPath: w_control
-      value: 
-      objectReference: {fileID: 1463510685}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 60fe524eb8258e948867f9c721851a09, type: 2}
   m_IsPrefabParent: 0

@@ -231,9 +231,9 @@ MonoBehaviour:
   - {fileID: 1218905373284228}
   - {fileID: 1080712011594564}
   planet: {fileID: 0}
+  turn: 0
   timer: 0
   spawnNumber: 0
-  spawnRate: 0.5
 --- !u!114 &114183058219565974
 MonoBehaviour:
   m_ObjectHideFlags: 1

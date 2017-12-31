@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class WaveControl : MonoBehaviour {
 
+	private int ENEMY_TYPES = 2;
+
 	public int wave;
 	public float waveTimer;
 	private float initTimer;
+	private int[][] waveData;
 	private GameObject[] enemies;
 	private PhaseControl control;
 
@@ -15,6 +18,9 @@ public class WaveControl : MonoBehaviour {
 		control = GetComponent<PhaseControl> ();
 		initTimer = 0;
 		waveTimer = 0;
+		waveData = new int[ENEMY_TYPES][];
+		waveData [0] = new int[] { 3, 0, 0, 1, 2, 2, 3, 3 };
+		waveData [1] = new int[] { 3, 2, 3, 3, 4, 4, 5, 5 };
 	}
 	
 	void Update () {
@@ -31,14 +37,21 @@ public class WaveControl : MonoBehaviour {
 		EnemySpawn spawn = GameObject.FindGameObjectWithTag ("Respawn").GetComponent<EnemySpawn>();
 		spawn.timer = 0;
 		spawn.spawnNumber = 0;
+		spawn.turn = 0;
 		control.ChangePhase(GamePhase.Prep);
 	}
 
 	public int[] getEnemyData(int turn){
-		return new int[] {0,5};
+		int[] enemies = new int[ENEMY_TYPES];
+		for (int i=0; i<ENEMY_TYPES; i++)
+			enemies[i] = waveData[wave-1][ENEMY_TYPES*turn + i];
+		return enemies;
 	}
 
 	public int getWaveAmount(){
-		return 20;
+		int total = 0;
+		for(var i = 0; i<waveData[wave-1].Length; i++)
+			total += waveData[wave-1][i];
+		return total;
 	}
 }

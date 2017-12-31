@@ -61,10 +61,15 @@
      <Compile Include="Assets\Scripts\Basic-Gameplay\MoveTrail.cs" />
      <Compile Include="Assets\Scripts\Basic-Gameplay\RotationCannon.cs" />
      <Compile Include="Assets\Scripts\Basic-Gameplay\Shoot.cs" />
+     <Compile Include="Assets\Scripts\EnemyScripts\EnemyAScript.cs" />
+     <Compile Include="Assets\Scripts\EnemyScripts\EnemyBScript.cs" />
      <Compile Include="Assets\Scripts\Menu\LevelSelect.cs" />
      <Compile Include="Assets\Scripts\Menu\MenuBtn.cs" />
      <Compile Include="Assets\Scripts\Menu\Options.cs" />
+     <Compile Include="Assets\Scripts\Story-Only\EnemyBase.cs" />
+     <Compile Include="Assets\Scripts\Story-Only\EnemySpawn.cs" />
      <Compile Include="Assets\Scripts\Story-Only\GameBtns.cs" />
+     <Compile Include="Assets\Scripts\Story-Only\GameStatus.cs" />
      <Compile Include="Assets\Scripts\Story-Only\MenuBtns.cs" />
      <Compile Include="Assets\Scripts\Story-Only\PhaseControl.cs" />
      <Compile Include="Assets\Scripts\Story-Only\Save_Data.cs" />
