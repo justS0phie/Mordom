@@ -2,40 +2,42 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LaserShoot : MonoBehaviour {
+public class ShotgunShoot : MonoBehaviour {
 
-	public GameObject LaserBeam;
-	bool charging = false;
+	public GameObject HitArea;
+	bool reloading = false;
 	float chargeBegin;
 	float chargeTimer;
 	Vector3 normalized;
+
+	public float firerate;
 
 	Transform firePoint;
 
 	// Use this for initialization
 	void Start () {
-		firePoint = transform.Find ("LaserFirePoint");
+		firePoint = transform.Find ("ShotgunFirePoint");
 	}
 
 	// Update is called once per frame
 	void LateUpdate () {
-		if (Input.GetButtonDown("Fire1") && !charging)
+		if (Input.GetButtonDown("Fire1") && !reloading)
 		{
 			chargeBegin = Time.time;
-			charging = true;
+			reloading = true;
+			Shooting ();
 		}
 		float now = Time.time;
 		chargeTimer = now - chargeBegin;
-		if (chargeTimer > 0.3f && charging) 
+		if (chargeTimer > firerate && reloading) 
 		{
-			Shooting();
-			charging = false;
+			reloading = false;
 		}
 
-		if (charging) {
-			normalized = new Vector3 (154f-154f*chargeTimer, 255f*chargeTimer, 137f+118f*chargeTimer).normalized;
+		if (reloading) {
+			normalized = new Vector3 (255f*chargeTimer, 126f*chargeTimer, 255f-255f*chargeTimer).normalized;
 		} else {
-			normalized = new Vector3 (154f, 0f, 137f).normalized;
+			normalized = new Vector3 (255f, 126f, 0f).normalized;
 		}
 		this.gameObject.GetComponent<SpriteRenderer> ().color = new Color (normalized.x, normalized.y, normalized.z);
 	}
@@ -43,7 +45,9 @@ public class LaserShoot : MonoBehaviour {
 	void Shooting ()
 	{
 		Vector2 firePointPosition = new Vector2(firePoint.position.x, firePoint.position.y);
-		GameObject newBullet = Instantiate(LaserBeam, firePointPosition, firePoint.rotation);
+		GameObject newBullet = Instantiate(HitArea, firePointPosition, firePoint.rotation);
 		newBullet.SetActive (true);
+		newBullet.transform.position -= newBullet.transform.up*2;
 	}
 }
+

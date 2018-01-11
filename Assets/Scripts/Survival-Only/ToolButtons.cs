@@ -7,9 +7,6 @@ public class ToolButtons : MonoBehaviour {
 	private GameObject[] toolList;
 	public ControleDeFases control;
 
-	private GameObject Cannon;
-	private GameObject LaserCannon;
-
 	void Start () {
 		toolList = GameObject.FindGameObjectsWithTag("Tool");
 	}
@@ -20,18 +17,24 @@ public class ToolButtons : MonoBehaviour {
 			foreach (GameObject tool in toolList)
 				tool.SetActive (false);
 
+			control.activateShotgun = false;
+			control.activateLaser = false;
+			control.activateCannon = false;
+
 			if (this.name == "Button1")
             {
                 control.activateCannon = true;
-                control.activateLaser = false;
             }
 
 			if (this.name == "Button2")
             {
                 control.activateLaser = true;
-                control.activateCannon = false;
             }
-			
+
+			if (this.name == "Button3")
+			{
+				control.activateShotgun = true;
+			}
 		}
 	}
 }

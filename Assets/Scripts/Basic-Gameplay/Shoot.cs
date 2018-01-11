@@ -38,17 +38,7 @@ public class Shoot : MonoBehaviour {
 	}
     void Shooting ()
     {
-        Vector2 mousePosition = new Vector2(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y);
-        Vector2 firePointPosition = new Vector2(firePoint.position.x, firePoint.position.y);
 		GameObject newBullet = Instantiate(BulletTrailPrefab, firePoint.position, firePoint.rotation);
 		newBullet.SetActive (true);
-        //RaycastHit2D hit = Physics2D.Raycast(firePointPosition, mousePosition - firePointPosition, distanceShoot, WhatToHit);
-        Debug.DrawLine(firePointPosition, (mousePosition - firePointPosition) * distanceShoot, Color.yellow);
-       /* if (hit.collider != null)
-        {
-            Debug.DrawLine(firePointPosition, hit.point, Color.red);
-            
-        }
-        */
     }
 }

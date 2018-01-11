@@ -12,9 +12,11 @@ public class ControleDeFases : MonoBehaviour {
 
 	public bool activateCannon;
 	public bool activateLaser;
+	public bool activateShotgun;
 
 	private GameObject Cannon;
 	private GameObject LaserCannon;
+	private GameObject Shotgun;
 
 	private GameObject alienspawn;
 	private GameObject[] toolList;
@@ -28,6 +30,7 @@ public class ControleDeFases : MonoBehaviour {
 
 		Cannon = GameObject.Find ("Cannon");
 		LaserCannon = GameObject.Find ("LaserCannon");
+		Shotgun = GameObject.Find ("Shotgun");
 
 		objetosInstanciados = false;
 		alienspawn = GameObject.FindGameObjectWithTag ("Respawn");
@@ -76,13 +79,22 @@ public class ControleDeFases : MonoBehaviour {
 			Cannon.SetActive(true);
 			activateCannon = false;
             LaserCannon.SetActive(false);
+			Shotgun.SetActive(false);
         }
 
 		if (activateLaser && !Input.GetMouseButtonDown(0)){
 			LaserCannon.SetActive(true);
 			activateLaser = false;
             Cannon.SetActive(false);
+			Shotgun.SetActive(false);
         }
+
+		if (activateShotgun && !Input.GetMouseButtonDown(0)){
+			Shotgun.SetActive(true);
+			activateShotgun = false;
+			Cannon.SetActive(false);
+			LaserCannon.SetActive(false);
+		}
 
 		if (fase != FaseDeJogo.Jogo) {
 			GameObject[] alienList = GameObject.FindGameObjectsWithTag("Alien");
