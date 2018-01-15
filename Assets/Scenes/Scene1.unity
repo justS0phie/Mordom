@@ -388,6 +388,24 @@ Prefab:
       propertyPath: control
       value: 
       objectReference: {fileID: 1170998112}
+    - target: {fileID: 1047366494973272, guid: 471ee1120cfdbdf458b93faf016a7689, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723215157824978, guid: 471ee1120cfdbdf458b93faf016a7689, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114860059714731340, guid: 471ee1120cfdbdf458b93faf016a7689,
+        type: 2}
+      propertyPath: m_Text
+      value: 'HP: '
+      objectReference: {fileID: 0}
+    - target: {fileID: 114860059714731340, guid: 471ee1120cfdbdf458b93faf016a7689,
+        type: 2}
+      propertyPath: m_FontData.m_FontStyle
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 471ee1120cfdbdf458b93faf016a7689, type: 2}
   m_IsPrefabParent: 0

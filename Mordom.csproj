@@ -98,6 +98,7 @@
     <Compile Include="Assets\Scripts\Basic-Gameplay\ButtonScripts.cs" />
     <Compile Include="Assets\Scripts\Basic-Gameplay\CameraControl.cs" />
     <Compile Include="Assets\Scripts\Basic-Gameplay\ControleDeArraste.cs" />
+    <Compile Include="Assets\Scripts\Basic-Gameplay\GameOverScript.cs" />
     <Compile Include="Assets\Scripts\Basic-Gameplay\LaserShoot.cs" />
     <Compile Include="Assets\Scripts\Basic-Gameplay\LaserTimer.cs" />
     <Compile Include="Assets\Scripts\Basic-Gameplay\MoveTrail.cs" />
