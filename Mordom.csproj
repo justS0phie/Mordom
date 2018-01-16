@@ -125,6 +125,12 @@
     <Compile Include="Assets\Scripts\Survival-Only\AlienSpawner.cs" />
     <Compile Include="Assets\Scripts\Survival-Only\ControleDeFases.cs" />
     <Compile Include="Assets\Scripts\Survival-Only\FileHandler.cs" />
+    <Compile Include="Assets\Scripts\Survival-Only\OriginInfoHandler.cs" />
+    <Compile Include="Assets\Scripts\Survival-Only\Q_Alpha\Q_Alpha_AlienA.cs" />
+    <Compile Include="Assets\Scripts\Survival-Only\Q_Alpha\Q_Alpha_AlienB.cs" />
+    <Compile Include="Assets\Scripts\Survival-Only\Q_Alpha\Q_Alpha_FileHandler.cs" />
+    <Compile Include="Assets\Scripts\Survival-Only\Q_Alpha\Q_Alpha_Restart.cs" />
+    <Compile Include="Assets\Scripts\Survival-Only\Q_Alpha\Q_Alpha_Spawner.cs" />
     <Compile Include="Assets\Scripts\Survival-Only\RestartButton.cs" />
     <Compile Include="Assets\Scripts\Survival-Only\StartButton.cs" />
     <Compile Include="Assets\Scripts\Survival-Only\ToolButtons.cs" />

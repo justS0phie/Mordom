@@ -172,6 +172,48 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1503685364}
   m_Script: {fileID: 11500000, guid: 061847939bb493641a4bc5102e32e1dd, type: 3}
+--- !u!1001 &965685476
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4560336057344670, guid: a82e290a3bbd9cf48999207ebf5122d5, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 214
+      objectReference: {fileID: 0}
+    - target: {fileID: 4560336057344670, guid: a82e290a3bbd9cf48999207ebf5122d5, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 120.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4560336057344670, guid: a82e290a3bbd9cf48999207ebf5122d5, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4560336057344670, guid: a82e290a3bbd9cf48999207ebf5122d5, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4560336057344670, guid: a82e290a3bbd9cf48999207ebf5122d5, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4560336057344670, guid: a82e290a3bbd9cf48999207ebf5122d5, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4560336057344670, guid: a82e290a3bbd9cf48999207ebf5122d5, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4560336057344670, guid: a82e290a3bbd9cf48999207ebf5122d5, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: a82e290a3bbd9cf48999207ebf5122d5, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &997555722
 Prefab:
   m_ObjectHideFlags: 0
@@ -364,12 +406,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114346853060368504, guid: 678117343c70ae34d97a5fb0e8f419ad,
+    - target: {fileID: 114676786141230984, guid: 678117343c70ae34d97a5fb0e8f419ad,
         type: 2}
       propertyPath: planet
       value: 
       objectReference: {fileID: 414452864}
-    - target: {fileID: 114676786141230984, guid: 678117343c70ae34d97a5fb0e8f419ad,
+    - target: {fileID: 114346853060368504, guid: 678117343c70ae34d97a5fb0e8f419ad,
         type: 2}
       propertyPath: planet
       value: 

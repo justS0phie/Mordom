@@ -5,16 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class GameOverScript : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
+    private GameObject origin;
+
+    // Use this for initialization
+    void Start () {
+        origin = GameObject.Find("OriginInfo");
+    }
 	
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetMouseButtonDown(0))
         {
-            SceneManager.LoadScene("Scene1");
+            string originScene = origin.GetComponent<OriginInfoHandler>().originScene;
+            SceneManager.LoadScene(originScene);
         }
     }
 }

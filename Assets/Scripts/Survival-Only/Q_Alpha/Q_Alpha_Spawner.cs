@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Q_Alpha_Spawner : MonoBehaviour {
 
@@ -19,7 +20,7 @@ public class Q_Alpha_Spawner : MonoBehaviour {
 	float limyb;
 
 	int score = 0;
-	int lives = 0;
+	int lives = 10;
 	public int spawnNumber = 0;
 
 	void Start () {
@@ -29,7 +30,7 @@ public class Q_Alpha_Spawner : MonoBehaviour {
 		InvokeRepeating("CreateAlien", 0, spawnRate);
 
 		scoreTxt.text = "Aliens Mortos: " + score;
-		livesTxt.text = "Vidas Perdidas: " + lives;
+		livesTxt.text = "HP: " + lives;
 
 	}
 
@@ -51,9 +52,13 @@ public class Q_Alpha_Spawner : MonoBehaviour {
 
 			if (alienPos.x > limxb || alienPos.x < limx || alienPos.y > limyb || alienPos.y < limy){
 				Destroy(alien);
-				lives = lives + 1;
-				livesTxt.text = "Vidas perdidas: " + lives;
-			}
+                lives = lives - 1;
+                if (lives <= 0)
+                {
+                    SceneManager.LoadScene("GameOver");
+                }
+                livesTxt.text = "HP: " + lives;
+            }
 		}
 	}
 
