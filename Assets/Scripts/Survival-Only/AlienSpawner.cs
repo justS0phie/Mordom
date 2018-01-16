@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AlienSpawner : MonoBehaviour {
 
@@ -17,7 +18,7 @@ public class AlienSpawner : MonoBehaviour {
 	float limyb;
 
 	int score = 0;
-	int lives = 0;
+	int lives = 10;
 	public int spawnNumber = 0;
 
 	void Start () {
@@ -27,7 +28,7 @@ public class AlienSpawner : MonoBehaviour {
         InvokeRepeating("CreateAlien", 0, spawnRate);
 
 		scoreTxt.text = "Aliens Mortos: " + score;
-		livesTxt.text = "Vidas Perdidas: " + lives;
+		livesTxt.text = "HP: " + lives;
 
     }
 	
@@ -48,8 +49,12 @@ public class AlienSpawner : MonoBehaviour {
 
 			if (move.magnitude < 2) {
 				Destroy(alien);
-				lives = lives + 1;
-				livesTxt.text = "Vidas perdidas: " + lives;
+				lives = lives - 1;
+                if (lives <= 0)
+                {
+                    SceneManager.LoadScene("GameOver");
+                }
+                livesTxt.text = "HP: " + lives;
 			}
         }
     }
