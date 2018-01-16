@@ -18,8 +18,9 @@ public class MenuBtn : MonoBehaviour {
 			transform.parent.gameObject.SetActive (false);
 		}
 		if (opt == "Story") {
-			LevelSelect.SetActive (true);
-			transform.parent.gameObject.SetActive (false);
+			//LevelSelect.SetActive (true);
+			//transform.parent.gameObject.SetActive (false);
+			SceneManager.LoadScene ("Scenes/Q_Alpha");
 		}
 		if (opt == "Survival")
 			SceneManager.LoadScene ("Scenes/Scene1");
