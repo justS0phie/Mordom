@@ -34,7 +34,8 @@ public class EnemyCScript : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D coll) {
 		if (coll.tag == "Planet") {
 			Destroy(this.gameObject);
-			planet.GetComponent<GameStatus>().loseLife ();
+			GameObject.Find("Alien").GetComponent<AlienSpawner>().loseLife ();
+			GameObject.Find("Alien").GetComponent<AlienSpawner>().loseLife ();
 		}
 		else if (coll.tag == "Tool") {
 			if (coll.gameObject.name == "missil") {

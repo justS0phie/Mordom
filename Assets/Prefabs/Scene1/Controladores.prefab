@@ -20,10 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4867867038642720}
   - component: {fileID: 114511227689566700}
-  - component: {fileID: 114200141945293042}
   - component: {fileID: 114584982851577444}
-  - component: {fileID: 114570764447410886}
-  - component: {fileID: 114910259442596792}
+  - component: {fileID: 114285546214912834}
   m_Layer: 0
   m_Name: Controladores
   m_TagString: GameController
@@ -44,7 +42,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114200141945293042
+--- !u!114 &114285546214912834
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -52,13 +50,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1330936911405010}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30c2b35a855eebd4ba083c66b3b63451, type: 3}
+  m_Script: {fileID: 11500000, guid: 27b2400b1803a7743a5bf6b11c33d394, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  phase: 0
-  enemyspawn: {fileID: 0}
-  planet: {fileID: 0}
-  startButton: {fileID: 0}
+  fase: 0
+  objetosInstanciados: 0
+  prep: 0
+  page: 0
+  activateCannon: 0
+  activateLaser: 0
+  activateShotgun: 0
+  planeta: {fileID: 0}
 --- !u!114 &114511227689566700
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -73,17 +75,6 @@ MonoBehaviour:
   habilitado: 0
   pseudoPilhaDeArraste: []
   objetoSendoArrastado: {fileID: 0}
---- !u!114 &114570764447410886
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1330936911405010}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10f31f32d5e585440969d9670e9a349b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114584982851577444
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -95,16 +86,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19703f16193918a42ae8c25be232a56d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114910259442596792
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1330936911405010}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8cd2881fa561ce745b388cbb44cab61f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wave: 0
-  waveTimer: 0

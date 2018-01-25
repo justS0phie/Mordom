@@ -8,6 +8,7 @@ public class AlienSpawner : MonoBehaviour {
 
     public GameObject alienA;
 	public GameObject alienB;
+	public GameObject alienC;
     public GameObject planet;
 	public Text scoreTxt;
 	public Text livesTxt;
@@ -34,8 +35,12 @@ public class AlienSpawner : MonoBehaviour {
 	
 	void Update () {
 
-        GameObject[] alienList = GameObject.FindGameObjectsWithTag("Alien");
+		if (lives <= 0)
+		{
+			SceneManager.LoadScene("GameOver");
+		}
 
+        GameObject[] alienList = GameObject.FindGameObjectsWithTag("Alien");
 
 		foreach (GameObject alien in alienList)
         {
@@ -50,10 +55,6 @@ public class AlienSpawner : MonoBehaviour {
 			if (move.magnitude < 2) {
 				Destroy(alien);
 				lives = lives - 1;
-                if (lives <= 0)
-                {
-                    SceneManager.LoadScene("GameOver");
-                }
                 livesTxt.text = "HP: " + lives;
 			}
         }
@@ -99,9 +100,13 @@ public class AlienSpawner : MonoBehaviour {
         move = move.normalized;
 
 		if (type <= 2) {
-			GameObject newAlien = Instantiate (alienB, alienPos, alienA.transform.rotation);
+			GameObject newAlien = Instantiate (alienB, alienPos, alienB.transform.rotation);
 			newAlien.SetActive (true);
 			newAlien.GetComponent<Rigidbody2D> ().velocity = move * speed;
+		} else if (type < 8) {
+			GameObject newAlien = Instantiate(alienC, alienPos, alienC.transform.rotation);
+			newAlien.SetActive (true);
+			newAlien.GetComponent<Rigidbody2D>().velocity = move * speed;
 		} else {
 			GameObject newAlien = Instantiate(alienA, alienPos, alienB.transform.rotation);
 			newAlien.SetActive (true);
@@ -114,5 +119,10 @@ public class AlienSpawner : MonoBehaviour {
 	public void addScore(){
 		score = score + 1;
 		scoreTxt.text = "Aliens mortos: " + score/2;
+	}
+
+	public void loseLife(){
+		lives = lives - 1;
+		livesTxt.text = "HP: " + lives;
 	}
 }

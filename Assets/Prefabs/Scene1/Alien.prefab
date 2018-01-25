@@ -22,8 +22,8 @@ GameObject:
   - component: {fileID: 212142900593040996}
   - component: {fileID: 50115731998343450}
   - component: {fileID: 60068231523491180}
-  - component: {fileID: 114020740325072604}
   - component: {fileID: 114530720435452526}
+  - component: {fileID: 114749714639052720}
   m_Layer: 0
   m_Name: Alien A
   m_TagString: Alien
@@ -42,8 +42,8 @@ GameObject:
   - component: {fileID: 212930093576195418}
   - component: {fileID: 50217356290512584}
   - component: {fileID: 60097049256343714}
-  - component: {fileID: 114960798768416814}
   - component: {fileID: 114790830242917340}
+  - component: {fileID: 114460291457234934}
   m_Layer: 0
   m_Name: Alien B
   m_TagString: Alien
@@ -62,8 +62,8 @@ GameObject:
   - component: {fileID: 212177129784796162}
   - component: {fileID: 50492471173106242}
   - component: {fileID: 60353677286628268}
-  - component: {fileID: 114190192070882216}
   - component: {fileID: 114087792559309066}
+  - component: {fileID: 114020768899874258}
   m_Layer: 0
   m_Name: Alien D
   m_TagString: Alien
@@ -98,7 +98,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4545927548694428}
-  - component: {fileID: 114034097750288096}
+  - component: {fileID: 114928880890417890}
   m_Layer: 0
   m_Name: Alien
   m_TagString: Respawn
@@ -386,37 +386,17 @@ PolygonCollider2D:
       - {x: -0.5877852, y: -0.80901706}
       - {x: 0.58778536, y: -0.80901694}
       - {x: 0.9510565, y: 0.30901712}
---- !u!114 &114020740325072604
+--- !u!114 &114020768899874258
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1209979201934060}
+  m_GameObject: {fileID: 1566279576598536}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1679a4d03a2548b46a4478da4c32806a, type: 3}
+  m_Script: {fileID: 11500000, guid: ed818657154ae7a4aaa87d1679197db1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114034097750288096
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1882246952315198}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1901bda42e44cfa40b7d5bf7d3afc51e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Enemy:
-  - {fileID: 1209979201934060}
-  - {fileID: 1474811712420760}
-  - {fileID: 1814829917080740}
-  - {fileID: 1566279576598536}
-  planet: {fileID: 0}
-  turn: 0
-  timer: 0
-  spawnNumber: 0
 --- !u!114 &114087792559309066
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -429,15 +409,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planet: {fileID: 0}
---- !u!114 &114190192070882216
+--- !u!114 &114460291457234934
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1566279576598536}
+  m_GameObject: {fileID: 1474811712420760}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1679a4d03a2548b46a4478da4c32806a, type: 3}
+  m_Script: {fileID: 11500000, guid: ed818657154ae7a4aaa87d1679197db1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &114530720435452526
@@ -465,6 +445,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   planet: {fileID: 0}
   alien: {fileID: 1566279576598536}
+--- !u!114 &114749714639052720
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1209979201934060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed818657154ae7a4aaa87d1679197db1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114790830242917340
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -477,17 +468,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planet: {fileID: 0}
---- !u!114 &114960798768416814
+--- !u!114 &114928880890417890
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1474811712420760}
+  m_GameObject: {fileID: 1882246952315198}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1679a4d03a2548b46a4478da4c32806a, type: 3}
+  m_Script: {fileID: 11500000, guid: ca264ed9a24d4b945b652a8076f82cd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  alienA: {fileID: 1209979201934060}
+  alienB: {fileID: 1474811712420760}
+  alienC: {fileID: 1814829917080740}
+  planet: {fileID: 0}
+  scoreTxt: {fileID: 0}
+  livesTxt: {fileID: 0}
+  spawnNumber: 0
 --- !u!212 &212142900593040996
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -528,6 +526,8 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!212 &212177129784796162
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -568,6 +568,8 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!212 &212522426517103864
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -608,6 +610,8 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!212 &212930093576195418
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -648,3 +652,5 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
