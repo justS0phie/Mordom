@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WaveControl : MonoBehaviour {
 
-	private int ENEMY_TYPES = 2;
+	private int ENEMY_TYPES = 4;
 
 	public int wave;
 	public float waveTimer;
