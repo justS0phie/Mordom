@@ -6,8 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Q_Alpha_Spawner : MonoBehaviour {
 
-	public GameObject alienA;
-	public GameObject alienB;
+	public GameObject[] alien;
 	public GameObject planet;
 	public Text scoreTxt;
 	public Text livesTxt;
@@ -66,9 +65,9 @@ public class Q_Alpha_Spawner : MonoBehaviour {
 	{
 		
 		Vector2 planetPosition = new Vector2(planet.transform.position.x, planet.transform.position.y);
-
+		int qnt = alien.Length;
 		int side = Random.Range(1, 5);
-		int type = Random.Range(1, 11);
+		int type = Random.Range(0, (qnt));
 
 		Vector2 move, alienPos;
 
@@ -88,15 +87,10 @@ public class Q_Alpha_Spawner : MonoBehaviour {
 		move = move.normalized;
 
 		if (control.fase == FaseDeJogo.Jogo){
-			if (type <= 2) {
-				GameObject newAlien = Instantiate (alienB, alienPos, alienA.transform.rotation);
+				GameObject newAlien = Instantiate (alien[type], alienPos, alien[0].transform.rotation);
 				newAlien.SetActive (true);
 				newAlien.GetComponent<Rigidbody2D> ().velocity = move * 5;
-			} else {
-				GameObject newAlien = Instantiate(alienA, alienPos, alienB.transform.rotation);
-				newAlien.SetActive (true);
-				newAlien.GetComponent<Rigidbody2D>().velocity = move * 5;
-			}
+			
 			spawnNumber++;
 		}
 	}
