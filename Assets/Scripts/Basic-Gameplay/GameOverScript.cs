@@ -9,15 +9,15 @@ public class GameOverScript : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        origin = GameObject.Find("OriginInfo");
+        //origin = GameObject.Find("OriginInfo");
     }
 	
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetMouseButtonDown(0))
         {
-            string originScene = origin.GetComponent<OriginInfoHandler>().originScene;
-            SceneManager.LoadScene(originScene);
+            //string originScene = origin.GetComponent<OriginInfoHandler>().originScene;
+            SceneManager.LoadScene("MenuScene");
         }
     }
 }
