@@ -73,6 +73,7 @@
      <Compile Include="Assets\Scripts\Story-Only\WeaponControl.cs" />
      <Compile Include="Assets\Scripts\Survival-Only\AlienSpawner.cs" />
      <Compile Include="Assets\Scripts\Survival-Only\ControleDeFases.cs" />
+     <Compile Include="Assets\Scripts\Survival-Only\ControlePause.cs" />
      <Compile Include="Assets\Scripts\Survival-Only\EnemyAScript.cs" />
      <Compile Include="Assets\Scripts\Survival-Only\EnemyBScript.cs" />
      <Compile Include="Assets\Scripts\Survival-Only\EnemyBase_Survival.cs" />
@@ -80,6 +81,7 @@
      <Compile Include="Assets\Scripts\Survival-Only\EnemyDScript.cs" />
      <Compile Include="Assets\Scripts\Survival-Only\FileHandler.cs" />
      <Compile Include="Assets\Scripts\Survival-Only\OriginInfoHandler.cs" />
+     <Compile Include="Assets\Scripts\Survival-Only\Q_Alpha\ControleQPause.cs" />
      <Compile Include="Assets\Scripts\Survival-Only\Q_Alpha\Q_Alpha_AlienA.cs" />
      <Compile Include="Assets\Scripts\Survival-Only\Q_Alpha\Q_Alpha_AlienB.cs" />
      <Compile Include="Assets\Scripts\Survival-Only\Q_Alpha\Q_Alpha_AlienC.cs" />
