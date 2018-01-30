@@ -4,15 +4,15 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class RestartButton : MonoBehaviour {
-
-	GameObject alienspawn;
-	public FileHandler handler;
-
-	void Start(){}
-
+	
+	public Canvas canvas;
+	public ControleDeFases controle;
+ 
 	void OnMouseDown(){
-        handler.save ();
-		SceneManager.LoadScene (SceneManager.GetActiveScene().name);    
+		canvas.gameObject.SetActive (true);
+		controle.onPause ();
+		Time.timeScale = 0;
 	}
 
 }
+	

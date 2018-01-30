@@ -5,14 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class Q_Alpha_Restart : MonoBehaviour {
 
-	GameObject alienspawn;
-	public Q_Alpha_FileHandler handler;
-
-	void Start(){}
+	public Canvas canvas;
+	public ControleDeFases controle;
 
 	void OnMouseDown(){
-		handler.save ();
-		SceneManager.LoadScene (SceneManager.GetActiveScene().name);    
+		canvas.gameObject.SetActive (true);
+		controle.onPause ();
+		Time.timeScale = 0;
 	}
 
 }

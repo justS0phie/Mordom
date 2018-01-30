@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4413598810593056}
   - component: {fileID: 114798675507884366}
   - component: {fileID: 114613468281311946}
+  - component: {fileID: 114262560156147444}
   m_Layer: 0
   m_Name: Controladores
   m_TagString: GameController
@@ -41,6 +42,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114262560156147444
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1430167498653532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c14bf823efbb074693457399e5ff584, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handler: {fileID: 0}
+  canvas: {fileID: 0}
+  controle: {fileID: 114613468281311946}
 --- !u!114 &114613468281311946
 MonoBehaviour:
   m_ObjectHideFlags: 1
