@@ -14,6 +14,8 @@ public class ControleDeFases : MonoBehaviour {
 	public bool activateLaser;
 	public bool activateShotgun;
 
+	private bool[] activateArmas;
+
 	private GameObject Cannon;
 	private GameObject LaserCannon;
 	private GameObject Shotgun;
@@ -35,11 +37,11 @@ public class ControleDeFases : MonoBehaviour {
 		objetosInstanciados = false;
 		alienspawn = GameObject.FindGameObjectWithTag ("Respawn");
 		alienspawn.SetActive (false);
-
 		toolList = GameObject.FindGameObjectsWithTag("Tool");
-
+		activateArmas = new bool[3];
 		foreach (GameObject tool in toolList)
 			tool.SetActive (false);
+		
 
 		planeta = null;
 	}
@@ -64,6 +66,22 @@ public class ControleDeFases : MonoBehaviour {
 			break;
 
 		}
+	}
+
+	public void onPause(){
+
+		activateArmas [0] = Cannon.activeInHierarchy ;
+		activateArmas [1] = LaserCannon.activeInHierarchy;
+		activateArmas [2] = Shotgun.activeInHierarchy;
+		Cannon.SetActive(false);
+		LaserCannon.SetActive(false);
+		Shotgun.SetActive(false);
+	}
+
+	public void onResume(){
+		activateCannon  = activateArmas [0];
+		activateLaser   = activateArmas [1];
+		activateShotgun = activateArmas [2];
 	}
 		
 	void Update () {
@@ -97,7 +115,7 @@ public class ControleDeFases : MonoBehaviour {
 		}
 
 		if (fase != FaseDeJogo.Jogo) {
-			GameObject[] alienList = GameObject.FindGameObjectsWithTag("Alien");
+			GameObject[] alienList = GameObject.FindGameObjectsWithTag ("Alien");
 
 			foreach (GameObject alien in alienList) {
 				Destroy (alien);

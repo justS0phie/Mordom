@@ -18,6 +18,7 @@ public class EnemyBase_Survival : MonoBehaviour {
 		if (coll.tag == "Tool") {
 			this.atDestroy(this.name);
 			Destroy (this.gameObject);
+			GameObject.FindGameObjectWithTag("Respawn").GetComponent<AlienSpawner> ().addScore ();
 			if (coll.gameObject.name=="missil")
 				Destroy (coll.transform.parent.gameObject);
 		}

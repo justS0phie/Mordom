@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Text;
 using System.IO;
+using UnityEngine.UI;
 
 public class FileHandler : MonoBehaviour {
 
@@ -20,6 +21,8 @@ public class FileHandler : MonoBehaviour {
 	public AlienSpawner alienSpawn;
 	public ControleDeFases control;
 	public GameObject planet;
+
+	public Text timeText;
 
 	Camera mainCamera;
 	Vector3 planetPosition;
@@ -48,6 +51,7 @@ public class FileHandler : MonoBehaviour {
 		} else {
 			initSpawn = alienSpawn.spawnNumber;
 		}
+		timeText.text = "Tempo: " + ((int)time).ToString ();
 	}
 
 	public void save(){

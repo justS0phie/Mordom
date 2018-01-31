@@ -54,3 +54,4 @@ MonoBehaviour:
   alienSpawn: {fileID: 0}
   control: {fileID: 0}
   planet: {fileID: 0}
+  timeText: {fileID: 0}

@@ -28,7 +28,7 @@ public class Q_Alpha_Spawner : MonoBehaviour {
 
 		InvokeRepeating("CreateAlien", 0, spawnRate);
 
-		scoreTxt.text = "Aliens Mortos: " + score;
+		scoreTxt.text = "Pontos: " + score;
 		livesTxt.text = "HP: " + lives;
 
 	}
@@ -66,13 +66,11 @@ public class Q_Alpha_Spawner : MonoBehaviour {
 		
 		Vector2 planetPosition = new Vector2(planet.transform.position.x, planet.transform.position.y);
 		int qnt = alien.Length;
-		int side = Random.Range(1, 5);
 		int type = Random.Range(0, (qnt));
 
 		Vector2 move, alienPos;
 
 		Camera camera = Camera.main;
-		CameraControl script = camera.GetComponent("CameraControl") as CameraControl;
 
 		float angle = Random.Range (0f, 2*Mathf.PI);
 
@@ -97,6 +95,6 @@ public class Q_Alpha_Spawner : MonoBehaviour {
 
 	public void addScore(){
 		score = score + 1;
-		scoreTxt.text = "Aliens mortos: " + score/2;
+		scoreTxt.text = "Pontos: " + score;
 	}
 }

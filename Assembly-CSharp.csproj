@@ -78,6 +78,7 @@
      <Compile Include="Assets\Scripts\Story-Only\WeaponControl.cs" />
      <Compile Include="Assets\Scripts\Survival-Only\AlienSpawner.cs" />
      <Compile Include="Assets\Scripts\Survival-Only\ControleDeFases.cs" />
+     <Compile Include="Assets\Scripts\Survival-Only\ControlePause.cs" />
      <Compile Include="Assets\Scripts\Survival-Only\EnemyAScript.cs" />
      <Compile Include="Assets\Scripts\Survival-Only\EnemyBase_Survival.cs" />
      <Compile Include="Assets\Scripts\Survival-Only\EnemyBScript.cs" />
@@ -85,6 +86,7 @@
      <Compile Include="Assets\Scripts\Survival-Only\EnemyDScript.cs" />
      <Compile Include="Assets\Scripts\Survival-Only\FileHandler.cs" />
      <Compile Include="Assets\Scripts\Survival-Only\OriginInfoHandler.cs" />
+     <Compile Include="Assets\Scripts\Survival-Only\Q_Alpha\ControleQPause.cs" />
      <Compile Include="Assets\Scripts\Survival-Only\Q_Alpha\Q_Alpha_AlienA.cs" />
      <Compile Include="Assets\Scripts\Survival-Only\Q_Alpha\Q_Alpha_AlienB.cs" />
      <Compile Include="Assets\Scripts\Survival-Only\Q_Alpha\Q_Alpha_AlienC.cs" />
@@ -105,12 +107,6 @@
  </Reference>
  <Reference Include="UnityEngine.TestRunner">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
- </Reference>
- <Reference Include="nunit.framework">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Timeline">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Analytics">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>

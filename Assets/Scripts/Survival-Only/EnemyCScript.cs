@@ -37,10 +37,11 @@ public class EnemyCScript : MonoBehaviour {
 			GameObject.Find("Alien").GetComponent<AlienSpawner>().loseLife ();
 			GameObject.Find("Alien").GetComponent<AlienSpawner>().loseLife ();
 		}
-		else if (coll.tag == "Tool") {
+		else if (coll.tag == "Tool") {	
 			if (coll.gameObject.name == "missil") {
 				Destroy (coll.transform.parent.gameObject);
 			}
+			GameObject.FindGameObjectWithTag("Respawn").GetComponent<AlienSpawner> ().addScore ();
 			GameObject newEnemy = Instantiate (alien, this.GetComponent<Rigidbody2D>().position, this.transform.rotation);
 			GameObject newEnemy2 = Instantiate (alien, this.GetComponent<Rigidbody2D>().position, this.transform.rotation);
 			newEnemy.SetActive (true);

@@ -28,7 +28,7 @@ public class AlienSpawner : MonoBehaviour {
 
         InvokeRepeating("CreateAlien", 0, spawnRate);
 
-		scoreTxt.text = "Aliens Mortos: " + score;
+		scoreTxt.text = "Pontos: " + score;
 		livesTxt.text = "HP: " + lives;
 
     }
@@ -118,7 +118,7 @@ public class AlienSpawner : MonoBehaviour {
 
 	public void addScore(){
 		score = score + 1;
-		scoreTxt.text = "Aliens mortos: " + score/2;
+		scoreTxt.text = "Pontos: " + score;
 	}
 
 	public void loseLife(){
