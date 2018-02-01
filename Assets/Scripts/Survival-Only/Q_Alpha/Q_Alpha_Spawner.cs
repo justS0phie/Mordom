@@ -21,12 +21,10 @@ public class Q_Alpha_Spawner : MonoBehaviour {
 	int score = 0;
 	int lives = 10;
 	public int spawnNumber = 0;
+	public float spawnRate = 1.0f;
+	public float timer = 0.0f;
 
 	void Start () {
-
-		float spawnRate = 0.5f;
-
-		InvokeRepeating("CreateAlien", 0, spawnRate);
 
 		scoreTxt.text = "Pontos: " + score;
 		livesTxt.text = "HP: " + lives;
@@ -34,6 +32,14 @@ public class Q_Alpha_Spawner : MonoBehaviour {
 	}
 
 	void Update () {
+
+		timer = timer + Time.deltaTime;
+
+		if (timer > spawnRate) {
+			timer = timer - spawnRate;
+			spawnRate = spawnRate - 0.01f;
+			CreateAlien ();
+		}
 
 		GameObject[] alienList = GameObject.FindGameObjectsWithTag("Alien");
 

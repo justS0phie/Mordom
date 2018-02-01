@@ -21,12 +21,10 @@ public class AlienSpawner : MonoBehaviour {
 	int score = 0;
 	int lives = 10;
 	public int spawnNumber = 0;
+	public float spawnRate = 1.0f;
+	public float timer = 0.0f;
 
 	void Start () {
-
-        float spawnRate = 0.5f;
-
-        InvokeRepeating("CreateAlien", 0, spawnRate);
 
 		scoreTxt.text = "Pontos: " + score;
 		livesTxt.text = "HP: " + lives;
@@ -34,6 +32,14 @@ public class AlienSpawner : MonoBehaviour {
     }
 	
 	void Update () {
+
+		timer = timer + Time.deltaTime;
+
+		if (timer > spawnRate) {
+			timer = timer - spawnRate;
+			spawnRate = spawnRate - 0.01f;
+			CreateAlien ();
+		}
 
 		if (lives <= 0)
 		{
@@ -103,7 +109,7 @@ public class AlienSpawner : MonoBehaviour {
 			GameObject newAlien = Instantiate (alienB, alienPos, alienB.transform.rotation);
 			newAlien.SetActive (true);
 			newAlien.GetComponent<Rigidbody2D> ().velocity = move * speed;
-		} else if (type < 8) {
+		} else if (type <= 4) {
 			GameObject newAlien = Instantiate(alienC, alienPos, alienC.transform.rotation);
 			newAlien.SetActive (true);
 			newAlien.GetComponent<Rigidbody2D>().velocity = move * speed;
