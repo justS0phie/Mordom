@@ -80,6 +80,14 @@ public class Q_Alpha_Spawner : MonoBehaviour {
 
 		float angle = Random.Range (0f, 2*Mathf.PI);
 
+		while (AngleIsInvalid(planetPosition, angle))
+			angle = Random.Range (0f, 2*Mathf.PI);
+
+		float quarter = Mathf.PI / 2;
+		float test = (angle + quarter / 2) % (quarter * 4);
+
+		print (test);
+
 		alienPos = new Vector2 (planetPosition.x, planetPosition.y);
 
 		alienPos = alienPos + 2*(new Vector2(Mathf.Sin(angle), Mathf.Cos(angle)));
@@ -102,5 +110,32 @@ public class Q_Alpha_Spawner : MonoBehaviour {
 	public void addScore(){
 		score = score + 1;
 		scoreTxt.text = "Pontos: " + score;
+	}
+
+	private bool AngleIsInvalid(Vector2 position, float angle){
+
+		Camera camera = Camera.main;
+		CameraControl script = camera.GetComponent("CameraControl") as CameraControl;
+
+		limx = 2*script.limx;
+		limy = 2*script.limy;
+		limxb = 2*script.limxb;
+		limyb = 2*script.limyb;
+
+		float marginX = (limxb - limx)/4;
+		float marginY = (limyb - limy)/4;
+
+		float quarter = Mathf.PI / 2;
+
+		if (position.y - marginY < limy && angle >= quarter && angle < 3*quarter)
+			return true;
+		if (position.x + marginX > limxb && angle >= 0 && angle < 2*quarter)
+			return true;
+		if (position.y + marginY > limyb && (angle <= quarter || angle > 3*quarter))
+			return true;
+		if (position.x - marginX < limx && angle >= 2*quarter)
+			return true;
+		return false;
+
 	}
 }

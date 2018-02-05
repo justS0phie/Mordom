@@ -14,8 +14,6 @@ public class Q_Alpha_AlienC : MonoBehaviour {
 
 	void Start ()
 	{
-		float dx = planet.transform.position.x - transform.position.x;
-		float dy = planet.transform.position.y - transform.position.y;
 		initSpeed = GetComponent<Rigidbody2D>().velocity;
 	}
 

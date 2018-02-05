@@ -68,21 +68,25 @@ public class AlienSpawner : MonoBehaviour {
 
     void CreateAlien()
     {
-		
-        Vector2 planetPosition = new Vector2(planet.transform.position.x, planet.transform.position.y);
-        
-		int side = Random.Range(1, 5);
-		int type = Random.Range(1, 11);
-
-        Vector2 move, alienPos;
 
 		Camera camera = Camera.main;
 		CameraControl script = camera.GetComponent("CameraControl") as CameraControl;
+
+		Vector2 planetPosition = new Vector2(planet.transform.position.x, planet.transform.position.y);
+
+		int side = Random.Range(1, 5);
 
 		limx = 2*script.limx;
 		limy = 2*script.limy;
 		limxb = 2*script.limxb;
 		limyb = 2*script.limyb;
+
+		while (SideIsInvalid(planetPosition, side))
+			side = Random.Range(1, 5);
+		
+		int type = Random.Range(1, 11);
+
+        Vector2 move, alienPos;
 
         if (side == 1)
 			alienPos = new Vector2(limx-2.5f, Random.Range(limy-2.5f,limyb+2.5f));
@@ -130,5 +134,22 @@ public class AlienSpawner : MonoBehaviour {
 	public void loseLife(){
 		lives = lives - 1;
 		livesTxt.text = "HP: " + lives;
+	}
+
+	private bool SideIsInvalid(Vector2 position, int side){
+		
+		float marginX = (limxb - limx)/4;
+		float marginY = (limyb - limy)/4;
+
+		if (position.x - marginX < limx && side == 1)
+			return true;
+		if (position.y + marginY < limy && side == 2)
+			return true;
+		if (position.x + marginX > limxb && side == 3)
+			return true;
+		if (position.y - marginY > limyb && side == 4)
+			return true;
+		return false;
+
 	}
 }

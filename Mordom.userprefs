@@ -1,14 +1,9 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Survival-Only\Q_Alpha\Q_Alpha_Spawner.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Survival-Only\AlienSpawner.cs">
     <Files>
-      <File FileName="Assets\Scripts\Survival-Only\Q_Alpha\Q_Alpha_AlienA.cs" Line="21" Column="36" />
-      <File FileName="Assets\Scripts\Survival-Only\Q_Alpha\Q_Alpha_AlienB.cs" Line="48" Column="1" />
-      <File FileName="Assets\Scripts\Survival-Only\Q_Alpha\Q_Alpha_AlienC.cs" Line="24" Column="60" />
-      <File FileName="Assets\Scripts\Survival-Only\Q_Alpha\Q_Alpha_Spawner.cs" Line="98" Column="32" />
-      <File FileName="Assets\Scripts\Survival-Only\EnemyBase_Survival.cs" Line="24" Column="4" />
-      <File FileName="Assets\Scripts\Survival-Only\EnemyCScript.cs" Line="44" Column="60" />
-      <File FileName="Assets\Scripts\Survival-Only\AlienSpawner.cs" Line="121" Column="37" />
+      <File FileName="Assets\Scripts\Survival-Only\Q_Alpha\Q_Alpha_Spawner.cs" Line="134" Column="35" />
+      <File FileName="Assets\Scripts\Survival-Only\AlienSpawner.cs" Line="150" Column="27" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
