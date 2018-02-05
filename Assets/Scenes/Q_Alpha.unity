@@ -436,17 +436,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114487494407758482, guid: afcdb775d068bfc4880a5dadf85e3156,
-        type: 2}
-      propertyPath: canvas
-      value: 
-      objectReference: {fileID: 1468995448}
-    - target: {fileID: 114487494407758482, guid: afcdb775d068bfc4880a5dadf85e3156,
-        type: 2}
-      propertyPath: controle
-      value: 
-      objectReference: {fileID: 2043895155}
-    - target: {fileID: 114428555118753590, guid: afcdb775d068bfc4880a5dadf85e3156,
+    - target: {fileID: 114026200288368594, guid: afcdb775d068bfc4880a5dadf85e3156,
         type: 2}
       propertyPath: control
       value: 
@@ -456,9 +446,19 @@ Prefab:
       propertyPath: control
       value: 
       objectReference: {fileID: 2043895155}
-    - target: {fileID: 114026200288368594, guid: afcdb775d068bfc4880a5dadf85e3156,
+    - target: {fileID: 114428555118753590, guid: afcdb775d068bfc4880a5dadf85e3156,
         type: 2}
       propertyPath: control
+      value: 
+      objectReference: {fileID: 2043895155}
+    - target: {fileID: 114487494407758482, guid: afcdb775d068bfc4880a5dadf85e3156,
+        type: 2}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1468995448}
+    - target: {fileID: 114487494407758482, guid: afcdb775d068bfc4880a5dadf85e3156,
+        type: 2}
+      propertyPath: controle
       value: 
       objectReference: {fileID: 2043895155}
     m_RemovedComponents: []
@@ -655,6 +655,10 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 996224399}
+    - target: {fileID: 1699980652161990, guid: 73cf3a285608f77498c67d67b19357ef, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 73cf3a285608f77498c67d67b19357ef, type: 2}
   m_IsPrefabParent: 0

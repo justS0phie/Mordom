@@ -83,11 +83,6 @@ public class Q_Alpha_Spawner : MonoBehaviour {
 		while (AngleIsInvalid(planetPosition, angle))
 			angle = Random.Range (0f, 2*Mathf.PI);
 
-		float quarter = Mathf.PI / 2;
-		float test = (angle + quarter / 2) % (quarter * 4);
-
-		print (test);
-
 		alienPos = new Vector2 (planetPosition.x, planetPosition.y);
 
 		alienPos = alienPos + 2*(new Vector2(Mathf.Sin(angle), Mathf.Cos(angle)));

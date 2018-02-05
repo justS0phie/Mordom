@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class OriginInfoHandler : MonoBehaviour {
 
     public string originScene;
+	public string scoreText;
+
     private static GameObject instanceRef;
 
     void Awake()
@@ -22,5 +25,18 @@ public class OriginInfoHandler : MonoBehaviour {
         }
         originScene = SceneManager.GetActiveScene().name;
     }
+
+	void Update(){
+		GameObject textParent = GameObject.Find("ScoreText");
+
+		if (textParent) {
+			scoreText = "";
+
+			string score = GameObject.Find ("Text - Score").GetComponent<Text> ().text;
+			string time = GameObject.Find ("Text - Time").GetComponent<Text> ().text;
+
+			scoreText = scoreText + time + "   " + score;
+		}
+	}
 }
 

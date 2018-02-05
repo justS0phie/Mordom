@@ -18,15 +18,14 @@ public class ControleQPause : MonoBehaviour {
 		handler.save ();
 		Time.timeScale = 1;
 		SceneManager.LoadScene (SceneManager.GetActiveScene().name);    
-
 	}
-	// Update is called once per frame
+
 	public void GoToMenu () {
 		handler.save ();
 		Time.timeScale = 1;
 		SceneManager.LoadScene ("MenuScene");
-
 	}
+
 	public void Resume(){
 		canvas.gameObject.SetActive (false);
 		Time.timeScale = 1;
