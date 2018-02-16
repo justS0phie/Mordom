@@ -7,8 +7,11 @@ public class MenuBtn : MonoBehaviour {
 
 	public GameObject OptionsScreen;
 	public GameObject LevelSelect;
-
-	void OnMouseDown(){
+    public bool pressed;
+    public bool idle_btn =true;
+    void OnMouseDown(){
+        pressed = true;
+        idle_btn = false;
 		string opt = this.name.Remove (this.name.Length - 3);
 
 		if (opt == "Quit")
