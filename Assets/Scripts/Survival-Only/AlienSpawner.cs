@@ -12,6 +12,7 @@ public class AlienSpawner : MonoBehaviour {
     public GameObject planet;
 	public Text scoreTxt;
 	public Text livesTxt;
+    public GameObject LifeBar;
 
 	float limx;
 	float limy;
@@ -19,7 +20,8 @@ public class AlienSpawner : MonoBehaviour {
 	float limyb;
 
 	int score = 0;
-	int lives = 10;
+	float lives = 10;
+    int max_hp = 10;
 	public int spawnNumber = 0;
 	public float spawnRate = 1.0f;
 	public float timer = 0.0f;
@@ -62,6 +64,7 @@ public class AlienSpawner : MonoBehaviour {
 				Destroy(alien);
 				lives = lives - 1;
                 livesTxt.text = "HP: " + lives;
+                LifeBar.GetComponent<Image>().fillAmount = lives / max_hp;
 			}
         }
     }
@@ -134,7 +137,8 @@ public class AlienSpawner : MonoBehaviour {
 	public void loseLife(){
 		lives = lives - 1;
 		livesTxt.text = "HP: " + lives;
-	}
+        LifeBar.GetComponent<Image>().fillAmount = lives / max_hp;
+    }
 
 	private bool SideIsInvalid(Vector2 position, int side){
 		
