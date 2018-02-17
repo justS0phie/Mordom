@@ -42,7 +42,7 @@ RenderSettings:
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 9
+  serializedVersion: 11
   m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
@@ -54,7 +54,7 @@ LightmapSettings:
     m_EnableBakedLightmaps: 0
     m_EnableRealtimeLightmaps: 0
   m_LightmapEditorSettings:
-    serializedVersion: 8
+    serializedVersion: 9
     m_Resolution: 2
     m_BakeResolution: 40
     m_TextureWidth: 1024
@@ -90,7 +90,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
   m_LightingDataAsset: {fileID: 0}
-  m_ShadowMaskMode: 2
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -152,16 +152,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114799050536463780, guid: ca260f82e1d5a894ca0a299f1157e0c5,
-        type: 2}
-      propertyPath: MenuScreen
-      value: 
-      objectReference: {fileID: 78406044}
-    - target: {fileID: 114789695069753536, guid: ca260f82e1d5a894ca0a299f1157e0c5,
-        type: 2}
-      propertyPath: MenuScreen
-      value: 
-      objectReference: {fileID: 78406044}
     - target: {fileID: 114696182381280708, guid: ca260f82e1d5a894ca0a299f1157e0c5,
         type: 2}
       propertyPath: MenuScreen
@@ -183,6 +173,16 @@ Prefab:
       value: 
       objectReference: {fileID: 78406044}
     - target: {fileID: 114323001108538778, guid: ca260f82e1d5a894ca0a299f1157e0c5,
+        type: 2}
+      propertyPath: MenuScreen
+      value: 
+      objectReference: {fileID: 78406044}
+    - target: {fileID: 114799050536463780, guid: ca260f82e1d5a894ca0a299f1157e0c5,
+        type: 2}
+      propertyPath: MenuScreen
+      value: 
+      objectReference: {fileID: 78406044}
+    - target: {fileID: 114789695069753536, guid: ca260f82e1d5a894ca0a299f1157e0c5,
         type: 2}
       propertyPath: MenuScreen
       value: 
@@ -3867,8 +3867,6 @@ Prefab:
       propertyPath: LevelSelect
       value: 
       objectReference: {fileID: 444758598}
-<<<<<<< HEAD
-=======
     - target: {fileID: 1797040079648420, guid: 2675bca21e510f249a3a63e9b76d7495, type: 2}
       propertyPath: m_IsActive
       value: 0
@@ -4152,7 +4150,6 @@ Prefab:
       propertyPath: m_LocalRotation.y
       value: -0
       objectReference: {fileID: 0}
->>>>>>> f9303606ed7be8a31dbbd3c48268ba6ac764de47
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2675bca21e510f249a3a63e9b76d7495, type: 2}
   m_IsPrefabParent: 0

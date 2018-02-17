@@ -14,11 +14,6 @@ public class MenuBtn : MonoBehaviour {
         idle_btn = false;
 		string opt = this.name.Remove (this.name.Length - 3);
 
-        GameObject originInfo = GameObject.Find("OriginInfo");
-
-        if (originInfo)
-            Destroy(originInfo.gameObject);
-
 		if (opt == "Quit")
 			Application.Quit();  
 		if (opt == "Options") {

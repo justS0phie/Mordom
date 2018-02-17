@@ -485,10 +485,7 @@ MonoBehaviour:
   planet: {fileID: 0}
   scoreTxt: {fileID: 0}
   livesTxt: {fileID: 0}
-  LifeBar: {fileID: 0}
   spawnNumber: 0
-  spawnRate: 1
-  timer: 0
 --- !u!212 &212142900593040996
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -529,6 +526,8 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!212 &212177129784796162
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -569,6 +568,8 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!212 &212522426517103864
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -609,6 +610,8 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!212 &212930093576195418
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -649,3 +652,5 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0

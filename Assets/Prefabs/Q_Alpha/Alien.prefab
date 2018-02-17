@@ -345,8 +345,6 @@ MonoBehaviour:
   livesTxt: {fileID: 0}
   control: {fileID: 0}
   spawnNumber: 0
-  spawnRate: 1
-  timer: 0
 --- !u!114 &114922716762742754
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -400,6 +398,8 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!212 &212511919311504022
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -440,6 +440,8 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!212 &212864550476792094
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -480,3 +482,5 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
