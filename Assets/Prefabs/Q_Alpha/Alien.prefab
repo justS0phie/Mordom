@@ -345,6 +345,8 @@ MonoBehaviour:
   livesTxt: {fileID: 0}
   control: {fileID: 0}
   spawnNumber: 0
+  spawnRate: 1
+  timer: 0
 --- !u!114 &114922716762742754
 MonoBehaviour:
   m_ObjectHideFlags: 1

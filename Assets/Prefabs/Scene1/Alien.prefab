@@ -485,7 +485,10 @@ MonoBehaviour:
   planet: {fileID: 0}
   scoreTxt: {fileID: 0}
   livesTxt: {fileID: 0}
+  LifeBar: {fileID: 0}
   spawnNumber: 0
+  spawnRate: 1
+  timer: 0
 --- !u!212 &212142900593040996
 SpriteRenderer:
   m_ObjectHideFlags: 1
