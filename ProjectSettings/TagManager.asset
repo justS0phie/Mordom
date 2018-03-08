@@ -9,6 +9,7 @@ TagManager:
   - Tool
   - Button
   - Shot
+  - Pause
   layers:
   - Default
   - TransparentFX
