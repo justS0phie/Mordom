@@ -77,15 +77,18 @@ LightmapSettings:
     m_PVRDirectSampleCount: 32
     m_PVRSampleCount: 500
     m_PVRBounces: 2
-    m_PVRFiltering: 0
+    m_PVRFilterTypeDirect: 0
+    m_PVRFilterTypeIndirect: 0
+    m_PVRFilterTypeAO: 0
     m_PVRFilteringMode: 1
     m_PVRCulling: 1
     m_PVRFilteringGaussRadiusDirect: 1
     m_PVRFilteringGaussRadiusIndirect: 5
     m_PVRFilteringGaussRadiusAO: 2
-    m_PVRFilteringAtrousColorSigma: 1
-    m_PVRFilteringAtrousNormalSigma: 1
-    m_PVRFilteringAtrousPositionSigma: 1
+    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
+    m_PVRFilteringAtrousPositionSigmaIndirect: 2
+    m_PVRFilteringAtrousPositionSigmaAO: 1
+    m_ShowResolutionOverlay: 1
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -107,6 +110,8 @@ NavMeshSettings:
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
+    debug:
+      m_Flags: 0
   m_NavMeshData: {fileID: 0}
 --- !u!114 &159656696 stripped
 MonoBehaviour:
@@ -245,6 +250,27 @@ Prefab:
       propertyPath: control
       value: 
       objectReference: {fileID: 2043895155}
+    - target: {fileID: 212500138109572398, guid: 153c27a09e92b7e449b3fef0a42bc2af,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0.7607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 212500138109572398, guid: 153c27a09e92b7e449b3fef0a42bc2af,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0.7607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 212500138109572398, guid: 153c27a09e92b7e449b3fef0a42bc2af,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0.7607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 212500138109572398, guid: 153c27a09e92b7e449b3fef0a42bc2af,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c83023b63dcd11742b94103c6a861a01,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 153c27a09e92b7e449b3fef0a42bc2af, type: 2}
   m_IsPrefabParent: 0
@@ -316,7 +342,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4406718614997756, guid: 8c98f4be53a0fb542937f39b9d5dd93b, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.03
       objectReference: {fileID: 0}
     - target: {fileID: 4406718614997756, guid: 8c98f4be53a0fb542937f39b9d5dd93b, type: 2}
       propertyPath: m_LocalPosition.y
@@ -345,6 +371,20 @@ Prefab:
     - target: {fileID: 4406718614997756, guid: 8c98f4be53a0fb542937f39b9d5dd93b, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212854155385816046, guid: 8c98f4be53a0fb542937f39b9d5dd93b,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ba70c28bddb1cf244a00678e2733a7f8,
+        type: 3}
+    - target: {fileID: 4406718614997756, guid: 8c98f4be53a0fb542937f39b9d5dd93b, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4406718614997756, guid: 8c98f4be53a0fb542937f39b9d5dd93b, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8c98f4be53a0fb542937f39b9d5dd93b, type: 2}
@@ -655,6 +695,54 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 996224399}
+    - target: {fileID: 114753540734400260, guid: 73cf3a285608f77498c67d67b19357ef,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d3fe9e0415d97f34982fc145e86b6028,
+        type: 3}
+    - target: {fileID: 114753540734400260, guid: 73cf3a285608f77498c67d67b19357ef,
+        type: 2}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114694313511069912, guid: 73cf3a285608f77498c67d67b19357ef,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7cd67316450f8a94cbeed67081e8cf9d,
+        type: 3}
+    - target: {fileID: 114694313511069912, guid: 73cf3a285608f77498c67d67b19357ef,
+        type: 2}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114092253948893496, guid: 73cf3a285608f77498c67d67b19357ef,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a8e1b85b1da1aeb43a115d94925d13b6,
+        type: 3}
+    - target: {fileID: 114092253948893496, guid: 73cf3a285608f77498c67d67b19357ef,
+        type: 2}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114941396323214322, guid: 73cf3a285608f77498c67d67b19357ef,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114951408162228098, guid: 73cf3a285608f77498c67d67b19357ef,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114765357799524120, guid: 73cf3a285608f77498c67d67b19357ef,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 73cf3a285608f77498c67d67b19357ef, type: 2}
   m_IsPrefabParent: 0

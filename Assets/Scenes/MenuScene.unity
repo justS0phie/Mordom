@@ -422,6 +422,24 @@ Prefab:
       propertyPath: prewarm
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 95171725255189386, guid: 2675bca21e510f249a3a63e9b76d7495,
+        type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 618d994f6b3c6a145a38aac2b0ce3613, type: 2}
+    - target: {fileID: 95121816932005128, guid: 2675bca21e510f249a3a63e9b76d7495,
+        type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: d96a62eb71aad9a46b14a87f6eb78a09, type: 2}
+    - target: {fileID: 1232502029238876, guid: 2675bca21e510f249a3a63e9b76d7495, type: 2}
+      propertyPath: m_Name
+      value: SurvivalBtn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1870114047956222, guid: 2675bca21e510f249a3a63e9b76d7495, type: 2}
+      propertyPath: m_Name
+      value: StoryBtn
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2675bca21e510f249a3a63e9b76d7495, type: 2}
   m_IsPrefabParent: 0
