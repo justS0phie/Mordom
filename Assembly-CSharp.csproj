@@ -98,7 +98,7 @@
      <Compile Include="Assets\Scripts\Survival-Only\StartButton.cs" />
      <Compile Include="Assets\Scripts\Survival-Only\ToolButtons.cs" />
  <Reference Include="Facebook.Unity.Settings">
- <HintPath>C:/Users/Alberto/Documents/Mordom/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
+ <HintPath>C:/Users/Miguel/Documents/Mordom/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
