@@ -64,6 +64,8 @@
      <Compile Include="Assets\Scripts\Basic-Gameplay\Shoot.cs" />
      <Compile Include="Assets\Scripts\Basic-Gameplay\ShotgunShoot.cs" />
      <Compile Include="Assets\Scripts\Basic-Gameplay\ShotgunTimer.cs" />
+     <Compile Include="Assets\Scripts\Basic-Gameplay\UpdateSpriteColors.cs" />
+     <Compile Include="Assets\Scripts\Menu\AnimateButtons.cs" />
      <Compile Include="Assets\Scripts\Menu\MenuController.cs" />
      <Compile Include="Assets\Scripts\Story-Only\ButtonControl.cs" />
      <Compile Include="Assets\Scripts\Story-Only\EnemyBase.cs" />

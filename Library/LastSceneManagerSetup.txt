@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Scene1.unity
+- path: C:/Users/Sarit/AppData/Local/Temp/Temp1_Mordom-master.zip/Mordom-master/Assets/Scenes/MenuScene.unity
   isLoaded: 1
   isActive: 1
