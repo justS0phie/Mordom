@@ -1,6 +1,6 @@
 Library/
-[Tt]emp/
-[Oo]bj/
+Temp/
+obj/
 [Bb]uild/
 [Bb]uilds/
 Assets/AssetStoreTools*
@@ -22,6 +22,7 @@ ExportedObj/
 *.booproj
 *.svd
 *.pdb
+*.info
 
 # Unity3D generated meta files
 *.pidb.meta
