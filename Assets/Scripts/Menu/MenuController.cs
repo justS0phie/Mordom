@@ -14,6 +14,10 @@ public class MenuController : MonoBehaviour {
 		PlayerPrefs.SetFloat("BlueColor", 255);
 	}
 
+	void Update(){
+
+	}
+
 	public void displayMenu(){//disable other canvas//
 		MainMenu.gameObject.SetActive (true);
 		LevelSelection.gameObject.SetActive (false);

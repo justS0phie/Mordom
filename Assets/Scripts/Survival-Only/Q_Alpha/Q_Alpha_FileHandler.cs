@@ -24,6 +24,8 @@ public class Q_Alpha_FileHandler : MonoBehaviour {
 
 	public Text timeText;
 
+	private string[] clicks;
+
 	Camera mainCamera;
 	Vector3 planetPosition;
 
@@ -34,6 +36,9 @@ public class Q_Alpha_FileHandler : MonoBehaviour {
 		initSize = mainCamera.orthographicSize;
 		time = 0;
 		startCount = false;
+
+		clicks = new string[1000];
+		clicks[0] = "None";
 	}
 
 	// Update is called once per frame
@@ -52,6 +57,22 @@ public class Q_Alpha_FileHandler : MonoBehaviour {
 			initSpawn = alienSpawn.spawnNumber;
 		}
 		timeText.text = "Tempo: " + ((int)time).ToString ();
+
+		if (Input.touchCount > 0 && control.fase == FaseDeJogo.Jogo) {
+
+			position = Input.GetTouch (0).position;
+			//position = Input.mousePosition;
+
+			if (clicks [0] == "None")
+				clicks [0] = "End";
+			else {
+				int i = 0;
+				while (clicks [i] != "End")
+					i++;
+				clicks [i] = position.x + "," + position.y;
+				clicks [i+1] = "End";
+			}
+		}
 	}
 
 	public void save(){
@@ -84,6 +105,16 @@ public class Q_Alpha_FileHandler : MonoBehaviour {
 			outfile.WriteLine ("Posição Button1: (" + position.x.ToString () + "," + position.y.ToString () + ")");
 			position = GameObject.Find ("Button2").transform.position;
 			outfile.WriteLine ("Posição Button2: (" + position.x.ToString () + "," + position.y.ToString () + ")");
+
+			if (clicks [0] == "None")
+				clicks [0] = "End";
+			else
+				outfile.WriteLine ("Cliques:");
+			int i = 0;
+			while (clicks [i] != "End") {
+				outfile.WriteLine (clicks [i]);
+				i++;
+			}
 		}
 	}
 }

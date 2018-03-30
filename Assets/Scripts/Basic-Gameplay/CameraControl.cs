@@ -52,14 +52,14 @@ public class CameraControl : MonoBehaviour {
             {
                 cam.orthographicSize -= (2 * orthoZoomSpeed);
             }
-            else if ((deltaMagnitudeDiff > 0) && (cam.orthographicSize < 20))
+            else if ((deltaMagnitudeDiff > 0) && (cam.orthographicSize < 10))
             {
                 cam.orthographicSize += (2 * orthoZoomSpeed);
             }
 
         }
 
-        if (Input.GetKey("down") && cam.orthographicSize < 25)
+        if (Input.GetKey("down") && cam.orthographicSize < 10)
 			cam.orthographicSize += orthoZoomSpeed;
 		if (Input.GetKey("up") && cam.orthographicSize > 5)
 			cam.orthographicSize -= orthoZoomSpeed;
