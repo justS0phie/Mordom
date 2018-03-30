@@ -9,9 +9,9 @@ public class MenuController : MonoBehaviour {
 	public GameObject Objects;
 
 	void Start(){
-		PlayerPrefs.SetFloat("RedColor", 255);
-		PlayerPrefs.SetFloat("GreenColor", 255);
-		PlayerPrefs.SetFloat("BlueColor", 255);
+		PlayerPrefs.SetFloat("Hue", 1);
+		PlayerPrefs.SetFloat("Saturation", 0);
+		PlayerPrefs.SetFloat("Value", 1);
 	}
 
 	void Update(){
@@ -39,19 +39,19 @@ public class MenuController : MonoBehaviour {
 		Objects.SetActive (false);
 	}
 
-	public void updateRedPref(){
+	public void updateHuePref(){
 		float value = OptionsMenu.GetComponent<Transform> ().GetChild (1).GetComponent<Slider> ().value;
-		PlayerPrefs.SetFloat("RedColor", value);
+		PlayerPrefs.SetFloat("Hue", value);
 	}
 
-	public void updateGreenPref(){
+	public void updateSaturationPref(){
 		float value = OptionsMenu.GetComponent<Transform> ().GetChild (2).GetComponent<Slider> ().value;
-		PlayerPrefs.SetFloat("GreenColor", value);
+		PlayerPrefs.SetFloat("Saturation", value);
 	}
 
-	public void updateBluePref(){
+	public void updateValuePref(){
 		float value = OptionsMenu.GetComponent<Transform> ().GetChild (3).GetComponent<Slider> ().value;
-		PlayerPrefs.SetFloat("BlueColor", value);
+		PlayerPrefs.SetFloat("Value", value);
 	}
 
 	public void loadSurvival(){

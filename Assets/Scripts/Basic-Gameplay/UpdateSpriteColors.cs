@@ -11,9 +11,9 @@ public class UpdateSpriteColors : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		float red = PlayerPrefs.GetFloat("RedColor");
-		float green = PlayerPrefs.GetFloat("GreenColor");
-		float blue = PlayerPrefs.GetFloat("BlueColor");
-		this.GetComponent<SpriteRenderer> ().color = new Color (red/255, green/255, blue/255, 255);
+		float hue = PlayerPrefs.GetFloat("Hue");
+		float saturation = PlayerPrefs.GetFloat("Saturation");
+		float value = PlayerPrefs.GetFloat("Value");
+		this.GetComponent<SpriteRenderer> ().color = Color.HSVToRGB (hue, saturation, value);
 	}
 }
