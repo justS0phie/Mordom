@@ -62,6 +62,15 @@ public class MenuController : MonoBehaviour {
 		SceneManager.LoadScene ("Scenes/Q_Alpha");
 	}
 
+	public void loadMenu(){
+		SceneManager.LoadScene ("Scenes/MenuScene");
+	}
+
+	public void loadLastScene(){
+		string scene = "";
+		SceneManager.LoadScene (scene);
+	}
+
 	public void quit(){
 		Application.Quit();
 	}
