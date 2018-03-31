@@ -12,7 +12,19 @@ public class Q_Alpha_AlienC : MonoBehaviour {
 	public GameObject alien;
 	private Q_Alpha_Spawner spawner;
 
-	void Start ()
+    public Animator animator;
+    public Rigidbody2D m_Rigidbody;
+    public RigidbodyConstraints2D pos;
+
+    private IEnumerator Die()
+    {
+
+        yield return new WaitForSeconds(0.8F);
+        Destroy(gameObject);
+    }
+
+
+    void Start ()
 	{
 		initSpeed = GetComponent<Rigidbody2D>().velocity;
 	}
@@ -21,8 +33,12 @@ public class Q_Alpha_AlienC : MonoBehaviour {
 		if (coll.tag == "Tool") {
 			GameObject.FindGameObjectWithTag("Respawn").GetComponent<Q_Alpha_Spawner> ().addScore ();
 			if (coll.gameObject.name=="missil")
-				Destroy (coll.transform.parent.gameObject);
-			GameObject newEnemy = Instantiate (alien, this.GetComponent<Rigidbody2D>().position, this.transform.rotation);
+                m_Rigidbody = GetComponent<Rigidbody2D>();
+            pos = RigidbodyConstraints2D.FreezePosition;
+            m_Rigidbody.constraints = pos;
+            animator.SetBool("die_anim", true);
+            StartCoroutine(Die());
+            GameObject newEnemy = Instantiate (alien, this.GetComponent<Rigidbody2D>().position, this.transform.rotation);
 			GameObject newEnemy2 = Instantiate (alien, this.GetComponent<Rigidbody2D>().position, this.transform.rotation);
 			newEnemy.SetActive (true);
 			newEnemy.GetComponent<Rigidbody2D> ().velocity = new Vector2 ((-initSpeed.y+initSpeed.x)/2, (initSpeed.x+initSpeed.y)/2);

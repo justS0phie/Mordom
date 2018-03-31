@@ -4,6 +4,8 @@ using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
+
 public class Q_Alpha_Spawner : MonoBehaviour {
 
 	public GameObject[] alien;
@@ -18,13 +20,15 @@ public class Q_Alpha_Spawner : MonoBehaviour {
 	float limxb;
 	float limyb;
 
-	int score = 0;
-	int lives = 10;
+	public int score = 0;
+	public float lives = 10;
 	public int spawnNumber = 0;
 	public float spawnRate = 1.0f;
 	public float timer = 0.0f;
+    public GameObject LifeBar;
+    float max_hp = 10;
 
-	void Start () {
+    void Start () {
 
 		scoreTxt.text = "Pontos: " + score;
 		livesTxt.text = "HP: " + lives;
@@ -61,8 +65,14 @@ public class Q_Alpha_Spawner : MonoBehaviour {
                 if (lives <= 0)
                 {
                     SceneManager.LoadScene("GameOver");
+
                 }
                 livesTxt.text = "HP: " + lives;
+          
+                LifeBar.GetComponent<Image>().fillAmount = lives / max_hp;
+  
+
+
             }
 		}
 	}

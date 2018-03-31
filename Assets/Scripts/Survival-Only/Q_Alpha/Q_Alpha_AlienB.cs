@@ -16,7 +16,19 @@ public class Q_Alpha_AlienB : MonoBehaviour {
 	public GameObject planet;
 	private Q_Alpha_Spawner parent;
 
-	void Start ()
+    public Animator animator;
+    public Rigidbody2D m_Rigidbody;
+    public RigidbodyConstraints2D pos;
+
+    private IEnumerator Die()
+    {
+
+        yield return new WaitForSeconds(0.8F);
+        Destroy(gameObject);
+    }
+
+
+    void Start ()
 	{
 		initSpeed = GetComponent<Rigidbody2D>().velocity;
 		initMagnitude = initSpeed.magnitude;
@@ -42,8 +54,12 @@ public class Q_Alpha_AlienB : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D coll) {
 		if (coll.tag == "Tool") {
-			GameObject.FindGameObjectWithTag("Respawn").GetComponent<Q_Alpha_Spawner> ().addScore ();
-			Destroy (this.gameObject);
+            m_Rigidbody = GetComponent<Rigidbody2D>();
+            pos = RigidbodyConstraints2D.FreezePosition;
+            m_Rigidbody.constraints = pos;
+            animator.SetBool("die_anim", true);
+            StartCoroutine(Die());
+            GameObject.FindGameObjectWithTag("Respawn").GetComponent<Q_Alpha_Spawner> ().addScore ();
 			if (coll.gameObject.name == "missil")
 				Destroy (coll.transform.parent.gameObject);
 		}

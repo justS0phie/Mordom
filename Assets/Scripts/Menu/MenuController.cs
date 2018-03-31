@@ -67,6 +67,7 @@ public class MenuController : MonoBehaviour {
 	}
 
 	public void loadLastScene(){
+        
 		string scene = "";
 		SceneManager.LoadScene (scene);
 	}

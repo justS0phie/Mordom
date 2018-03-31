@@ -45,9 +45,9 @@ public class Shoot : MonoBehaviour {
 	}
     void Shooting ()
     {
-		source.pitch = Random.Range (LowPitch, HighPitch);
-		float vol = Random.Range (LowVol, HighVol);
-		source.PlayOneShot (shootSound, vol);
+		//source.pitch = Random.Range (LowPitch, HighPitch);
+		//float vol = Random.Range (LowVol, HighVol);
+		//source.PlayOneShot (shootSound, vol);
 		GameObject newBullet = Instantiate(BulletTrailPrefab, firePoint.position, firePoint.rotation);
 		newBullet.SetActive (true);
 
