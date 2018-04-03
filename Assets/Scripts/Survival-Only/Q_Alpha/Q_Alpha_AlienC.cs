@@ -7,6 +7,8 @@ public class Q_Alpha_AlienC : MonoBehaviour {
 	float distance;
 	float proportion;
 	Vector2 initSpeed;
+	public AudioSource source;
+	public AudioClip explosion;
 
 	public GameObject planet;
 	public GameObject alien;
@@ -32,6 +34,7 @@ public class Q_Alpha_AlienC : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D coll) {
 		if (coll.tag == "Tool") {
 			GameObject.FindGameObjectWithTag("Respawn").GetComponent<Q_Alpha_Spawner> ().addScore ();
+			source.PlayOneShot (explosion, 0.4f);
 			if (coll.gameObject.name=="missil")
                 m_Rigidbody = GetComponent<Rigidbody2D>();
             pos = RigidbodyConstraints2D.FreezePosition;
