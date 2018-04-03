@@ -50,9 +50,9 @@ public class ShotgunShoot : MonoBehaviour {
 
 	void Shooting ()
 	{
-		//source.pitch = Random.Range (LowPitch, HighPitch);
-		//float vol = Random.Range (LowVol, HighVol);
-		//source.PlayOneShot (shootSound, vol);
+		source.pitch = Random.Range (LowPitch, HighPitch);
+		float vol = Random.Range (LowVol, HighVol);
+		source.PlayOneShot (shootSound, vol);
 		Vector2 firePointPosition = new Vector2(firePoint.position.x, firePoint.position.y);
 		GameObject newBullet = Instantiate(HitArea, firePointPosition, firePoint.rotation);
 		newBullet.SetActive (true);

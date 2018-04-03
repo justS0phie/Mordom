@@ -7,6 +7,8 @@ public class EnemyBase_Survival : MonoBehaviour {
     public Animator animator;
     public Rigidbody2D m_Rigidbody;
     public RigidbodyConstraints2D pos;
+	public AudioSource source;
+	public AudioClip explosion;
 
     private IEnumerator Die()
     {
@@ -22,6 +24,7 @@ public class EnemyBase_Survival : MonoBehaviour {
 		}
 		if (coll.tag == "Tool") {
             m_Rigidbody = GetComponent<Rigidbody2D>();
+			source.PlayOneShot (explosion, 0.4f);
             pos = RigidbodyConstraints2D.FreezePosition;
             m_Rigidbody.constraints = pos;
             animator.SetBool("die_anim", true);
