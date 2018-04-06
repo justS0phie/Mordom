@@ -14,6 +14,8 @@ public class AlienSpawner : MonoBehaviour {
 	public Text livesTxt;
     public GameObject LifeBar;
 
+	public FileHandler file_handler;
+
 	float limx;
 	float limy;
 	float limxb;
@@ -45,6 +47,7 @@ public class AlienSpawner : MonoBehaviour {
 
 		if (lives <= 0)
 		{
+			file_handler.GetComponent<FileHandler> ().save();
 			SceneManager.LoadScene("GameOver");
 		}
 

@@ -14,6 +14,7 @@ public class Q_Alpha_Spawner : MonoBehaviour {
 	public Text livesTxt;
 
 	public ControleDeFases control;
+	public Q_Alpha_FileHandler file_handler;
 
 	float limx;
 	float limy;
@@ -64,6 +65,7 @@ public class Q_Alpha_Spawner : MonoBehaviour {
                 lives = lives - 1;
                 if (lives <= 0)
                 {
+					file_handler.GetComponent<Q_Alpha_FileHandler> ().save();
                     SceneManager.LoadScene("GameOver");
 
                 }

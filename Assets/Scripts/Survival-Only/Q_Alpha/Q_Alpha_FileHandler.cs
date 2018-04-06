@@ -81,6 +81,19 @@ public class Q_Alpha_FileHandler : MonoBehaviour
                 clicks[i + 1] = "End";
             }
         }
+		else if (Input.GetMouseButtonDown(0)) {
+			position = Input.mousePosition;
+
+			if (clicks [0] == "None")
+				clicks [0] = "End";
+			else {
+				int i = 0;
+				while (clicks [i] != "End")
+					i++;
+				clicks [i] = position.x + "," + position.y;
+				clicks [i+1] = "End";
+			}
+		}
     }
 
     public void save()
@@ -105,6 +118,7 @@ public class Q_Alpha_FileHandler : MonoBehaviour
                 outfile.WriteLine(line);
             }
             outfile.WriteLine("");
+			outfile.WriteLine("Modo de jogo: Quarentena");
             outfile.WriteLine("Tempo de jogo: " + time.ToString());
             outfile.WriteLine(score.ToString());
             outfile.WriteLine(hit.ToString());

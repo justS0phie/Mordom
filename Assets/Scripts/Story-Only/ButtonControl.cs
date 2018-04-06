@@ -21,10 +21,20 @@ public class ButtonControl : MonoBehaviour {
 	}
 
 	public void buttonRestart(){
-		
+
 		if (controller == null) {
 			controller = GameObject.FindGameObjectWithTag ("GameController");
 			script = controller.GetComponent ("ControleDeFases") as ControleDeFases;
+
+			try
+			{
+				FileHandler file_handler = controller.GetComponent("FileHandler") as FileHandler;
+				file_handler.save ();
+			} catch {
+				Q_Alpha_FileHandler file_handler = controller.GetComponent("Q_Alpha_FileHandler") as Q_Alpha_FileHandler;
+				file_handler.save ();
+			}
+
 		}
 
 		canvas.gameObject.SetActive (true);

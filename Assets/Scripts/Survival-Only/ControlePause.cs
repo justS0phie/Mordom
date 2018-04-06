@@ -19,7 +19,7 @@ public class ControlePause : MonoBehaviour {
 		SceneManager.LoadScene (SceneManager.GetActiveScene().name);    
 
 	}
-	// Update is called once per frame
+
 	public void GoToMenu () {
 		handler.save ();
 		Time.timeScale = 1;
