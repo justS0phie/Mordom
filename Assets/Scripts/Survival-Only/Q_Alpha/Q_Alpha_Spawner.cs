@@ -42,7 +42,7 @@ public class Q_Alpha_Spawner : MonoBehaviour {
 
 		if (timer > spawnRate) {
 			timer = timer - spawnRate;
-			spawnRate = spawnRate - 0.01f;
+			spawnRate = spawnRate * 0.99f;
 			CreateAlien ();
 		}
 
