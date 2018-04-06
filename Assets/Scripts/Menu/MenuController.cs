@@ -66,11 +66,18 @@ public class MenuController : MonoBehaviour {
 		SceneManager.LoadScene ("Scenes/MenuScene");
 	}
 
-	public void loadLastScene(){
-        
-		string scene = "";
-		SceneManager.LoadScene (scene);
-	}
+    public void loadLastScene()
+    {
+
+        OriginInfoHandler origininfo = GameObject.Find("OriginInfo").GetComponent<OriginInfoHandler>();
+
+        print(origininfo.originScene);
+        if (origininfo.originScene == "Scene1") { 
+
+        SceneManager.LoadScene("Scenes/Scene1");
+        }
+        else { SceneManager.LoadScene("Scenes/Q_Alpha"); }
+    }
 
 	public void quit(){
 		Application.Quit();

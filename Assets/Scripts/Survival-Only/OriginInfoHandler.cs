@@ -24,6 +24,7 @@ public class OriginInfoHandler : MonoBehaviour {
             Destroy(gameObject);
         }
         originScene = SceneManager.GetActiveScene().name;
+  
     }
 
 	void Update(){
@@ -36,7 +37,10 @@ public class OriginInfoHandler : MonoBehaviour {
 			string time = GameObject.Find ("Text - Time").GetComponent<Text> ().text;
 
 			scoreText = scoreText + time + "   " + score;
-		}
+
+            originScene = SceneManager.GetActiveScene().name;
+          
+        }
 	}
 }
 
