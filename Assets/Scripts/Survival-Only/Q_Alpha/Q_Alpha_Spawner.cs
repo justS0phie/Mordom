@@ -108,7 +108,7 @@ public class Q_Alpha_Spawner : MonoBehaviour {
 		if (control.fase == FaseDeJogo.Jogo){
 				GameObject newAlien = Instantiate (alien[type], alienPos, alien[0].transform.rotation);
 				newAlien.SetActive (true);
-				newAlien.GetComponent<Rigidbody2D> ().velocity = move * 5;
+				newAlien.GetComponent<Rigidbody2D> ().velocity = move * 2;
 			
 			spawnNumber++;
 		}
