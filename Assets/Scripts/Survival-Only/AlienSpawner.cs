@@ -45,13 +45,17 @@ public class AlienSpawner : MonoBehaviour {
 			CreateAlien ();
 		}
 
-		if (lives <= 0)
+        GameObject[] alienList = GameObject.FindGameObjectsWithTag("Alien");
+
+        if (lives == 0)
 		{
+            foreach (GameObject alien in alienList)
+            {
+                Destroy(alien);
+            }
 			file_handler.GetComponent<FileHandler> ().save();
 			SceneManager.LoadScene("GameOver");
 		}
-
-        GameObject[] alienList = GameObject.FindGameObjectsWithTag("Alien");
 
 		foreach (GameObject alien in alienList)
         {
