@@ -11,7 +11,7 @@ public class GameOverScript : MonoBehaviour {
     // Use this for initialization
     void Start () {
         origin = GameObject.Find("OriginInfo");
-		GameObject.Find ("Score Text").GetComponent<Text> ().text = origin.GetComponent<OriginInfoHandler> ().scoreText;
+		GameObject.Find ("Score Text").GetComponent<Text>().text = origin.GetComponent<OriginInfoHandler> ().scoreText;
     }
 
 	public void Restart() {

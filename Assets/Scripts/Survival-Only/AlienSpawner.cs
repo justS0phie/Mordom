@@ -34,6 +34,11 @@ public class AlienSpawner : MonoBehaviour {
 		livesTxt.text = "HP: " + lives;
 
     }
+	public void DeleteAll(){
+		foreach (GameObject o in Object.FindObjectsOfType<GameObject>()) {
+			Destroy(o);
+		}
+	}
 	
 	void Update () {
 
@@ -49,10 +54,13 @@ public class AlienSpawner : MonoBehaviour {
 
         if (lives == 0)
 		{
-            foreach (GameObject alien in alienList)
-            {
-                Destroy(alien);
-            }
+			//DeleteAll ();
+			foreach (GameObject alien in alienList)
+			{
+				Destroy(alien);
+			}
+			Destroy(planet);
+
 			file_handler.GetComponent<FileHandler> ().save();
 			SceneManager.LoadScene("GameOver");
 		}
