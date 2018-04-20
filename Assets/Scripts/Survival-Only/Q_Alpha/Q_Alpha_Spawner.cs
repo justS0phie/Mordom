@@ -48,18 +48,6 @@ public class Q_Alpha_Spawner : MonoBehaviour {
 
 		GameObject[] alienList = GameObject.FindGameObjectsWithTag("Alien");
 
-		if (lives <= 0)
-		{
-			foreach (GameObject alien in alienList)
-			{
-				Destroy(alien);
-			}
-			Destroy(planet);
-
-			file_handler.GetComponent<Q_Alpha_FileHandler> ().save();
-			SceneManager.LoadScene("GameOver");
-
-		}
 
 		foreach (GameObject alien in alienList)
 		{
@@ -76,15 +64,28 @@ public class Q_Alpha_Spawner : MonoBehaviour {
 			if (alienPos.x > limxb || alienPos.x < limx || alienPos.y > limyb || alienPos.y < limy){
 				Destroy(alien);
                 lives = lives - 1;
-               
+
+				if (lives <= 0)
+				{
+					foreach (GameObject alien2 in alienList)
+					{
+						Destroy(alien);
+					}
+					Destroy(planet);
+
+					file_handler.GetComponent<Q_Alpha_FileHandler> ().save();
+					SceneManager.LoadScene("GameOver");
+
+				}
+
                 livesTxt.text = "HP: " + lives;
           
                 LifeBar.GetComponent<Image>().fillAmount = lives / max_hp;
             }
 
-
-
+		
 		}
+
 	}
 
 	void CreateAlien()

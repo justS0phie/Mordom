@@ -3020,8 +3020,8 @@ MonoBehaviour:
   SliderHue: {fileID: 1514236932}
   SliderSaturacao: {fileID: 1682323980}
   SliderBrilho: {fileID: 1766242850}
-  hue: 1
-  saturacao: 0
+  hue: 0.6
+  saturacao: 0.68
   brilho: 1
 --- !u!1 &1465115557
 GameObject:
@@ -3059,7 +3059,7 @@ MonoBehaviour:
   SliderSaturacao: {fileID: 1682323980}
   SliderBrilho: {fileID: 1766242850}
   hue: 1
-  saturacao: 1
+  saturacao: 0
   brilho: 1
 --- !u!114 &1465115559
 MonoBehaviour:

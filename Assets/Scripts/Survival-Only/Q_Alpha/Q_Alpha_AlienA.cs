@@ -29,6 +29,7 @@ public class Q_Alpha_AlienA : MonoBehaviour {
             m_Rigidbody = GetComponent<Rigidbody2D>();
 			source.PlayOneShot (explosion, 0.4f);
             pos = RigidbodyConstraints2D.FreezePosition;
+			Destroy (this.GetComponent<Collider2D>());
             m_Rigidbody.constraints = pos;
             animator.SetBool("die_anim", true);
             StartCoroutine(Die());

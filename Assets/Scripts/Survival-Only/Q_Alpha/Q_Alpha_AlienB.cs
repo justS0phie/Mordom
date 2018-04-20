@@ -17,7 +17,6 @@ public class Q_Alpha_AlienB : MonoBehaviour {
 
 	public GameObject planet;
 	private Q_Alpha_Spawner parent;
-
     public Animator animator;
     public Rigidbody2D m_Rigidbody;
     public RigidbodyConstraints2D pos;
@@ -56,9 +55,11 @@ public class Q_Alpha_AlienB : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D coll) {
 		if (coll.tag == "Tool") {
+
             m_Rigidbody = GetComponent<Rigidbody2D>();
 			source.PlayOneShot (explosion, 0.4f);
             pos = RigidbodyConstraints2D.FreezePosition;
+			Destroy (this.GetComponent<Collider2D>());
             m_Rigidbody.constraints = pos;
             animator.SetBool("die_anim", true);
             StartCoroutine(Die());
