@@ -67,18 +67,21 @@ public class Q_Alpha_FileHandler : MonoBehaviour
         if (Input.touchCount > 0 && control.fase == FaseDeJogo.Jogo)
         {
 
-            position = Input.GetTouch(0).position;
-            position = Input.mousePosition;
-
-            if (clicks[0] == "None")
-                clicks[0] = "End";
-            else
+            if (Input.GetTouch(0).phase == TouchPhase.Began)
             {
-                int i = 0;
-                while (clicks[i] != "End")
-                    i++;
-                clicks[i] = position.x + "," + position.y;
-                clicks[i + 1] = "End";
+                position = Input.GetTouch(0).position;
+                //position = Input.mousePosition;
+
+                if (clicks[0] == "None")
+                    clicks[0] = "End";
+                else
+                {
+                    int i = 0;
+                    while (clicks[i] != "End")
+                        i++;
+                    clicks[i] = position.x + "," + position.y;
+                    clicks[i + 1] = "End";
+                }
             }
         }
 		else if (Input.GetMouseButtonDown(0)) {
@@ -129,6 +132,8 @@ public class Q_Alpha_FileHandler : MonoBehaviour
             outfile.WriteLine("Posição Button1: (" + position.x.ToString() + "," + position.y.ToString() + ")");
             position = GameObject.Find("Button2").transform.position;
             outfile.WriteLine("Posição Button2: (" + position.x.ToString() + "," + position.y.ToString() + ")");
+            position = GameObject.Find("Button3").transform.position;
+            outfile.WriteLine("Posição Button3: (" + position.x.ToString() + "," + position.y.ToString() + ")");
 
             if (clicks[0] == "None")
                 clicks[0] = "End";
