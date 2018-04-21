@@ -52,7 +52,7 @@ public class AlienSpawner : MonoBehaviour {
 
         GameObject[] alienList = GameObject.FindGameObjectsWithTag("Alien");
 
-        if (lives == 0)
+        if (lives <= 0)
 		{
 			//DeleteAll ();
 			foreach (GameObject alien in alienList)

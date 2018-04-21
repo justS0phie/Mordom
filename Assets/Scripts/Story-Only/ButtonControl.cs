@@ -9,6 +9,10 @@ public class ButtonControl : MonoBehaviour {
 	public ControleDeFases script;
 	public GameObject canvas;
     public Button Start;
+    public Button Ok;
+    public Image instruct;
+    public Button next;
+    public Image instruct2;
 
     public void buttonStart(){
 		
@@ -20,7 +24,22 @@ public class ButtonControl : MonoBehaviour {
         script.MudarDeFase (FaseDeJogo.Jogo);
 	}
 
-	public void buttonRestart(){
+    public void buttonOk()
+    {
+   
+        Ok.gameObject.SetActive(false);
+        instruct.gameObject.SetActive(false);
+        
+    }
+
+    public void buttonNext()
+    {
+
+     
+        instruct2.gameObject.SetActive(false);
+    }
+
+    public void buttonRestart(){
 
 		if (controller == null) {
 			controller = GameObject.FindGameObjectWithTag ("GameController");
