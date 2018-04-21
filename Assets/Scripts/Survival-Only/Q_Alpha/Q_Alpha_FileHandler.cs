@@ -4,6 +4,7 @@ using UnityEngine;
 using System.Text;
 using System.IO;
 using UnityEngine.UI;
+using System;
 
 public class Q_Alpha_FileHandler : MonoBehaviour
 {
@@ -103,7 +104,11 @@ public class Q_Alpha_FileHandler : MonoBehaviour
     {
         if (control.fase != FaseDeJogo.Jogo)
             return;
-        string path = Application.persistentDataPath + "/Statistics.txt";
+        string path = Application.persistentDataPath + "/Statistics_"
+            + DateTime.Now.Year + DateTime.Now.Month + DateTime.Now.Day
+            + "_"
+            + DateTime.Now.Hour + DateTime.Now.Minute + DateTime.Now.Second + DateTime.Now.Millisecond
+            + ".txt";
         if (!System.IO.File.Exists(path))
         {
             System.IO.FileStream file = null;

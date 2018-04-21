@@ -65,7 +65,10 @@ public class Q_Alpha_Spawner : MonoBehaviour {
 				Destroy(alien);
                 lives = lives - 1;
 
-				if (lives <= 0)
+                livesTxt.text = "HP: " + lives;
+                LifeBar.GetComponent<Image>().fillAmount = lives / max_hp;
+
+                if (lives <= 0)
 				{
 					foreach (GameObject alien2 in alienList)
 					{
@@ -77,10 +80,6 @@ public class Q_Alpha_Spawner : MonoBehaviour {
 					SceneManager.LoadScene("GameOver");
 
 				}
-
-                livesTxt.text = "HP: " + lives;
-          
-                LifeBar.GetComponent<Image>().fillAmount = lives / max_hp;
             }
 
 		
