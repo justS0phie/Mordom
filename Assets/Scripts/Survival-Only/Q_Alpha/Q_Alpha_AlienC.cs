@@ -30,26 +30,20 @@ public class Q_Alpha_AlienC : MonoBehaviour {
 		initSpeed = GetComponent<Rigidbody2D>().velocity;
 	}
 
-	void OnTriggerEnter2D(Collider2D coll) {
-		if (coll.tag == "Tool") {
-			GameObject.FindGameObjectWithTag("Respawn").GetComponent<Q_Alpha_Spawner> ().addScore ();
-			source.PlayOneShot (explosion, 0.4f);
-			if (coll.gameObject.name == "missil") {
-				m_Rigidbody = GetComponent<Rigidbody2D> ();
-				pos = RigidbodyConstraints2D.FreezePosition;
-				Destroy (this.GetComponent<Collider2D>());
-				m_Rigidbody.constraints = pos;
-				animator.SetBool ("die_anim", true);
-				StartCoroutine (Die ());
-				GameObject newEnemy = Instantiate (alien, this.GetComponent<Rigidbody2D> ().position, this.transform.rotation);
-				GameObject newEnemy2 = Instantiate (alien, this.GetComponent<Rigidbody2D> ().position, this.transform.rotation);
-				newEnemy.SetActive (true);
-				newEnemy.GetComponent<Rigidbody2D> ().velocity = new Vector2 ((-initSpeed.y + initSpeed.x) / 2, (initSpeed.x + initSpeed.y) / 2);
-
-				newEnemy2.SetActive (true);
-				newEnemy2.GetComponent<Rigidbody2D> ().velocity = new Vector2 ((initSpeed.y + initSpeed.x) / 2, (-initSpeed.x + initSpeed.y) / 2);
-				Destroy (this.gameObject);
-			}
-		}
-	}
+    void OnTriggerEnter2D(Collider2D coll)
+    {
+        if (coll.tag == "Tool")
+        {
+            m_Rigidbody = GetComponent<Rigidbody2D>();
+            source.PlayOneShot(explosion, 0.4f);
+            pos = RigidbodyConstraints2D.FreezePosition;
+            Destroy(this.GetComponent<Collider2D>());
+            m_Rigidbody.constraints = pos;
+            animator.SetBool("die_anim", true);
+            StartCoroutine(Die());
+            GameObject.FindGameObjectWithTag("Respawn").GetComponent<Q_Alpha_Spawner>().addScore();
+            if (coll.gameObject.name == "missil")
+                Destroy(coll.transform.parent.gameObject);
+        }
+    }
 }
