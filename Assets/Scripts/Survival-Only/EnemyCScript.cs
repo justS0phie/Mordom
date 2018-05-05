@@ -12,23 +12,16 @@ public class EnemyCScript : MonoBehaviour {
 	public GameObject planet;
 	public GameObject alien;
 
-	void Start ()
-	{
-		planet = GameObject.Find ("Planet");
-		float dx = planet.transform.position.x - transform.position.x;
-		float dy = planet.transform.position.y - transform.position.y;
-		initD = new Vector2(dx, dy).magnitude;
+	void Start(){
 		initSpeed = GetComponent<Rigidbody2D>().velocity;
 	}
 
-	// Update is called once per frame
-	void Update () {
+	void Update(){
 		float dx = planet.transform.position.x - transform.position.x;
 		float dy = planet.transform.position.y - transform.position.y;
 
-		distance = new Vector2(dx, dy).magnitude;
-		proportion = (distance / initD) * 3;
-		GetComponent<Rigidbody2D>().velocity = initSpeed*proportion ;
+		Vector2 move = new Vector2(dx, dy).normalized;
+		GetComponent<Rigidbody2D> ().velocity = move * 2.5f;
 	}
 
 	void OnTriggerEnter2D(Collider2D coll) {
@@ -49,12 +42,7 @@ public class EnemyCScript : MonoBehaviour {
 
 			newEnemy2.SetActive (true);
 			newEnemy2.GetComponent<Rigidbody2D> ().velocity = new Vector2 (initSpeed.y, -initSpeed.x);
-			this.atDestroy(this.name);
 			Destroy (this.gameObject);
 		}
-	}
-
-	private void atDestroy(string alienName){
-
 	}
 }

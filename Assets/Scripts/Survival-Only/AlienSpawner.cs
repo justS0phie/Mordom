@@ -120,7 +120,7 @@ public class AlienSpawner : MonoBehaviour {
         
         move = new Vector2(dx, dy);
 
-        float speed = move.magnitude/4;
+        float speed = 2.5f;
 
 		if (move.magnitude < 5)
 			return;

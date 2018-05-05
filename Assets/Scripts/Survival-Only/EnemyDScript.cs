@@ -28,14 +28,13 @@ public class EnemyDScript : MonoBehaviour {
 		float dy = planet.transform.position.y - transform.position.y;
 		newSpeed = new Vector2 (dx, dy);
 		distance = newSpeed.magnitude;
-		proportion = (distance / initD) * 3;
 		if (Timer > 0.25f) {
 			speed = GetComponent<Rigidbody2D> ().velocity;
 			speed.Normalize ();
 			newSpeed.Normalize ();
-			GetComponent<Rigidbody2D> ().velocity = (speed + newSpeed) * proportion;
+			GetComponent<Rigidbody2D> ().velocity = (speed + newSpeed);
 		} else {
-			GetComponent<Rigidbody2D> ().velocity = speed * proportion;
+			GetComponent<Rigidbody2D> ().velocity = speed;
 		}
 
 	}

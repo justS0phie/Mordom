@@ -36,8 +36,7 @@ public class EnemyBScript : MonoBehaviour {
 				side = Random.Range (1, 3);
 				return;
 			}
-			proportion = ((distance-1) / initD) * 3;
-			GetComponent<Rigidbody2D> ().velocity = initSpeed * proportion;
+
 		} else if (phase == 2) {
 			float dx = planet.transform.position.x - transform.position.x;
 			float dy = planet.transform.position.y - transform.position.y;
@@ -55,12 +54,7 @@ public class EnemyBScript : MonoBehaviour {
 			}
 
 		} else if (phase == 3) {
-			float dx = planet.transform.position.x - transform.position.x;
-			float dy = planet.transform.position.y - transform.position.y;
-
-			distance = new Vector2 (dx, dy).magnitude;
-			proportion = (distance / initD) * 3;
-			GetComponent<Rigidbody2D> ().velocity = initSpeed * proportion;
+			GetComponent<Rigidbody2D> ().velocity = initSpeed;
 		}
 	}
 		
